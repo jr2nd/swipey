@@ -25,6 +25,7 @@ function swipemove() {
   if (down === true) {
     mywidth -= 1;
     this.style.width = mywidth + 'px';
+    alert('move')
   } //if
 } //function
 
