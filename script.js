@@ -17,6 +17,7 @@ function swipeon() {
 }
 
 function swipeoff() {
+  this.style.width="300px"
   down = false;
 }
 
@@ -28,6 +29,6 @@ function swipemove() {
 } //function
 
 function swipeout() {
-  mywidth = 300;
+  this.style.width = "300px";
   down = false;
 }
