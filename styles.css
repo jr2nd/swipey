@@ -9,19 +9,22 @@ div {
   border-left: double 6px;
   font-size: 20px;
   text-align: center;
-/*  max-width: 97%;
+  /*  max-width: 97%;
   min-width: 30%;*/
 }
+
 .swipey {
-  background-color: chocolate;
+  background-color: red;
   height: 10vh;
+  width: 1vw;
 }
+
 .swipey:active {
   border-top: solid 5pxs;
   border-right: dotted 4px;
   border-bottom: groove 5px;
   border-left: double 6px;
-  background-color: #8b4513;
+  background-color: chocolate;
   font-size: 24px;
 }
 
@@ -33,7 +36,8 @@ div {
   background-color: blue;
 }
 
-@media only screen and (max-width: 500px) {
-  body{
+@media only screen and (max-width: 1000px) {
+  body {
+    background-color: red;
   }
 }
