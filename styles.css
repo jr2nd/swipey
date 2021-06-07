@@ -1,31 +1,30 @@
-# {
+* {
   box-sizing: border-box;
-}
-
-body {
-  background: #deb887; /*burlywood*/
-}
-
-div {
-  border-top: groove .2em;
-  border-right: groove .3em;
-  border-bottom: groove .4em;
-  border-left: groove .5em;
-  font-size: 20px;
   text-align: center;
 }
 
-.swipey {
-  background-color: chocolate;
+body {
+  background: hsl(190, 75%, 47%);
 }
 
+#swipey-continer {
+  font-size: 1em;
+  text-align: center;
+
+}
+
+.swipey {
+  background-color: hsl(25, 75%, 47%);
+}
+#swipey-01 {
+  border-radius: 25px 25px 0px 0px;
+}
 .swipey:active {
-  border-top: solid 5pxs;
-  border-right: dotted 4px;
-  border-bottom: groove 5px;
-  border-left: double 6px;
-  background-color: chocolate;
-  font-size: 24px;
+  border-top: solid;
+  border-right: groove;
+  border-bottom: double;
+  background-color: hsl(50,75%, 47%);
+  font-size: larger;
 }
 
 .swipey-right {
@@ -34,6 +33,12 @@ div {
 
 .swipey-left {
   background-color: blue;
+}
+
+#answers {
+  display: grid;
+  border-radius: 0px 0px 25px 25px;
+  background-color: hsl(205,75%, 47%);
 }
 
 @media screen and (max-width: 400px) {
