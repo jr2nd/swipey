@@ -3,12 +3,17 @@ let swipey = document.getElementsByClassName('swipey');
 let coords = document.getElementById('coords');
 let down = false;
 
+
 for (let i = 0; i < swipey.length; i++) {
   swipey[i].addEventListener('mousedown', swipeon);
   swipey[i].addEventListener('mouseup', swipeoff);
   swipey[i].addEventListener('mousemove', swipemove);
   swipey[i].addEventListener('mouseout', swipeout);
-  swipey[i].addEventListener('touchmove', touchswipe)
+    swipey[i].addEventListener('touchmove', swipemove);
+    swipey[i].addEventListener('touchend', logswipe}
+
+function logswipe() {
+  console.log('logswipe')
 }
 
 function swipeon() {
@@ -27,5 +32,5 @@ function swipeout() {
 }
 
 function touchswipe() {
-  alert('touchswipe')
+  alert('touchswipe');
 }
