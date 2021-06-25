@@ -14,8 +14,8 @@ for (let i = 0; i < swipey.length; i++) {
 }
 
 function swipestart(e) {
-  mouseX.innerHTML = e.touches[0].clientX;
-  mouseY.innerHTML = e.touches[0].clientY;
+  mousex.innerHTML = e.touches[0].clientX;
+  mousey.innerHTML = e.touches[0].clientY;
   swipemove()
 }
 function swipemove(e) {
