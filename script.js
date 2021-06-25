@@ -16,8 +16,9 @@ for (let i = 0; i < swipey.length; i++) {
 function swipestart() {
   startstop.innerHTML = 'swipe start';
 }
-function swipemove() {
-  startstop.innerHTML='swipe move'
+function swipemove(e) {
+  startstop.innerHTML = e.touches[0].clientX;
+  startstop.innerHTML = e.touches[0].clientX; 
 }
 function swipecancel() {
   startstop.innerHTML = 'swipe cancelled';
