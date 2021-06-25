@@ -1,5 +1,5 @@
 const swipeycontainer = document.querySelector('#swipey-container');
-const swipey = document.querySelector('.swipey');
+const swipey = document.querySelectorAll('.swipey');
 const answer = document.querySelector('#answer');
 const startstop = document.querySelector('#startstop');
 const coords = document.querySelector('#coords');
@@ -14,14 +14,14 @@ for (let i = 0; i < swipey.length; i++) {
 }
 
 function swipestart() {
-  startstop.innerHTML = "swipe start"
+  startstop.innerHTML = 'swipe start';
+  swipey[1].innerHTML='swipestart'
 }
-function swipemove() {
-
-}
+function swipemove() {}
 function swipecancel() {
-  startstop.innerHTML = 'swipe cancelled'
+  startstop.innerHTML = 'swipe cancelled';
 }
 function swipeend() {
-  startstop.innerHTML = 'swipe end'
+  startstop.innerHTML = 'swipe end';
+  swipey[2].innerHTML='swipe stop'
 }
