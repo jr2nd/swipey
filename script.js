@@ -19,7 +19,7 @@ function swipestart(e) {
   swipemove(e)
 }
 function swipemove(e) {
-  coords.innerHTML = e.touches[0].clientX + ' ' + e.touches[0].clientY;
+  coords.innerHTML = parseInt(e.touches[0].clientX) + ' ' + parseInt(e.touches[0].clientY);
 }
 function swipecancel(e) {
   startstop.innerHTML = 'swipe cancelled';
