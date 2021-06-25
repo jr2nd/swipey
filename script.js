@@ -14,12 +14,11 @@ for (let i = 0; i < swipey.length; i++) {
 }
 
 function swipestart(e) {
-  mousex.innerHTML = e.touches[0].clientX;
-  mousey.innerHTML = e.touches[0].clientY;
+ coords.innerHTML = e.targetTouches[0].target.tagName; 
   swipemove(e)
 }
 function swipemove(e) {
-  coords.innerHTML = parseInt(e.touches[0].clientX) + ' ' + parseInt(e.touches[0].clientY);
+
 }
 function swipecancel(e) {
   startstop.innerHTML = 'swipe cancelled';
