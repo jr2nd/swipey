@@ -13,10 +13,10 @@ for (let i = 0; i < swipey.length; i++) {
   swipey[i].addEventListener('touchend', swipeend);
 }
 
-function swipestart(e) {
+function swipestart() {
   startstop.innerHTML = 'swipe start';
 }
-function swipemove() {
+function swipemove(e) {
   startstop.innerHTML = parseInt(e.touches[0].clientX) + ' ' + parseInt(e.touches[0].clientY); 
 }
 function swipecancel() {
