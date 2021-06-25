@@ -17,7 +17,7 @@ function swipestart() {
   startstop.innerHTML = 'swipe start';
 }
 function swipemove() {
-  startstop.innerHTML = parseInt(Event.touches[0].clientX) + ' ' + parseInt(Event.touches[0].clientY); 
+  startstop.innerHTML = parseInt(e.touches[0].clientX) + ' ' + parseInt(e.touches[0].clientY); 
 }
 function swipecancel() {
   startstop.innerHTML = 'swipe cancelled';
