@@ -15,7 +15,7 @@ for (let i = 0; i < swipey.length; i++) {
 
 function swipestart() {
   startstop.innerHTML = 'swipe start';
-  swipey[1].innerHTML='swipestart'
+  swipey[3].innerHTML='swipestart'
 }
 function swipemove() {}
 function swipecancel() {
@@ -23,5 +23,5 @@ function swipecancel() {
 }
 function swipeend() {
   startstop.innerHTML = 'swipe end';
-  swipey[2].innerHTML='swipe stop'
+  swipey[3].innerHTML='swipe stop'
 }
