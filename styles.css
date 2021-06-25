@@ -8,22 +8,20 @@ body {
 }
 
 #swipey-continer {
-  font-size: 1em;
+  font-size: 2em;
   text-align: center;
 }
 
 .swipey {
   background-color: hsl(25, 75%, 47%);
-}
-#swipey-01 {
-  border-radius: 25px 25px 0px 0px;
+  font-size: 2em;
+  border-radius: 25px 25px 25px 25px;
 }
 .swipey:active {
   border-top: solid;
   border-right: groove;
   border-bottom: double;
   background-color: hsl(50, 75%, 47%);
-  font-size: larger;
 }
 
 .swipey-right {
@@ -34,13 +32,13 @@ body {
   background-color: blue;
 }
 
-#answers {
+#answer {
   display: grid;
-  border-radius: 0px 0px 25px 25px;
+  border-radius: 25px 25px 25px 25px;
   background-color: hsl(205, 75%, 47%);
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 576px) {
   body {
     background-color: green;
   }

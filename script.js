@@ -14,7 +14,7 @@ for (let i = 0; i < swipey.length; i++) {
 }
 
 function swipestart() {
-  answer.innerHTML = "swipe start"
+  startstop.innerHTML = "swipe start"
 }
 function swipemove() {
 
