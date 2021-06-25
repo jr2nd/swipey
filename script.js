@@ -16,7 +16,7 @@ for (let i = 0; i < swipey.length; i++) {
 function swipestart(e) {
   mousex.innerHTML = e.touches[0].clientX;
   mousey.innerHTML = e.touches[0].clientY;
-  swipemove()
+  swipemove(e)
 }
 function swipemove(e) {
   coords.innerHTML = e.touches[0].clientX + ' ' + e.touches[0].clientY;
