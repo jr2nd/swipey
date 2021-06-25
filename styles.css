@@ -10,7 +10,6 @@ body {
 #swipey-continer {
   font-size: 1em;
   text-align: center;
-
 }
 
 .swipey {
@@ -23,7 +22,7 @@ body {
   border-top: solid;
   border-right: groove;
   border-bottom: double;
-  background-color: hsl(50,75%, 47%);
+  background-color: hsl(50, 75%, 47%);
   font-size: larger;
 }
 
@@ -38,7 +37,7 @@ body {
 #answers {
   display: grid;
   border-radius: 0px 0px 25px 25px;
-  background-color: hsl(205,75%, 47%);
+  background-color: hsl(205, 75%, 47%);
 }
 
 @media screen and (max-width: 400px) {
