@@ -15,13 +15,13 @@ for (let i = 0; i < swipey.length; i++) {
 
 function swipestart() {
   startstop.innerHTML = 'swipe start';
-  swipey[3].innerHTML='swipestart'
 }
-function swipemove() {}
+function swipemove() {
+  swipey[3].innerHTML='swipe move'
+}
 function swipecancel() {
   startstop.innerHTML = 'swipe cancelled';
 }
 function swipeend() {
   startstop.innerHTML = 'swipe end';
-  swipey[3].innerHTML='swipe stop'
 }
