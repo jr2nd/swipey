@@ -17,7 +17,7 @@ function swipestart() {
   startstop.innerHTML = 'swipe start';
 }
 function swipemove() {
-  swipey[3].innerHTML='swipe move'
+  startstop.innerHTML='swipe move'
 }
 function swipecancel() {
   startstop.innerHTML = 'swipe cancelled';
