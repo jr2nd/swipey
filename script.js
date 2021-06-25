@@ -13,7 +13,7 @@ for (let i = 0; i < swipey.length; i++) {
   swipey[i].addEventListener('touchend', swipeend);
 }
 
-function swipestart() {
+function swipestart(() =>alert('swipe')) {
   startstop.innerHTML = 'swipe start';
 }
 function swipemove(e) {
