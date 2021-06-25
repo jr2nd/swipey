@@ -14,7 +14,7 @@ for (let i = 0; i < swipey.length; i++) {
 }
 
 function swipestart(e) {
-startstop.innerHTML = etouches[0].clientX;
+startstop.innerHTML = e.touches[0].clientX;
 }
 function swipemove(e) {
   startstop.innerHTML = parseInt(e.touches[0].clientX) + ' ' + parseInt(e.touches[0].clientY); 
