@@ -20,7 +20,7 @@ function swipestart(e) {
 }
 function swipemove(e) {
 let touchx = e.touches[0].clientX;
-startstop.innerHTML = swipey[0].width;
+startstop.innerHTML = swipey[0].clientWidth;
 }
 function swipecancel(e) {
   startstop.innerHTML = 'swipe cancelled';
