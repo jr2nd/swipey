@@ -17,7 +17,7 @@ for (let i = 0; i < swipey.length; i++) {
 }
 
 function swipestart(e) {
-  this.style.color='blue';
+  this.style.color='blue' ? this.style.color = 'red' : this.style.color='blue';
 }
 function swipemove(e) {
 this.style.backgroundColor='purple'
