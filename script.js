@@ -16,8 +16,8 @@ for (let i = 0; i < swipey.length; i++) {
   swipey[i].addEventListener('dragstart', swipestart)
 }
 
-function swipestart(e) {
-  this.style.color='red';
+function swipestart() {
+  this.style.color='blue';
  
   swipemove(e)
 }
