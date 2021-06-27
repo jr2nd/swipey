@@ -20,7 +20,17 @@ function swipestart(e) {
 }
 function swipemove(e) {
 let touchx = e.touches[0].clientX;
-startstop.innerHTML = swipey[0].clientWidth;
+let swipeywidth = swipey[0].clientWidth;
+slider = parseInt(swipeywidth - touchx) % 100;
+slider < 25 ? color1 = yellow : color1 = black;
+slider < 50 ? color2 = yellow : color2 = black;
+slider < 75 ? color3 = yellow : color3 = black;
+slider < 100 ? color4 = yellow : color4 = black;
+this.style.backgroundImage = "linear-gradient( to right, " +
+color1 + ", " +
+color2 + ", " +
+color3 + ", " +
+color4 + ")";
 }
 function swipecancel(e) {
   startstop.innerHTML = 'swipe cancelled';
