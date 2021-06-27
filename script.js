@@ -1,3 +1,5 @@
+
+
 const swipeycontainer = document.querySelector('#swipey-container');
 const swipey = document.querySelectorAll('.swipey');
 const answer = document.querySelector('#answer');
@@ -15,7 +17,7 @@ for (let i = 0; i < swipey.length; i++) {
 }
 
 function swipestart(e) {
- coords.innerHTML = e.targetTouches[0] + 'hello'; 
+  this.style.color='red';
  
   swipemove(e)
 }
