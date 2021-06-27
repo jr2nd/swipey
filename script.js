@@ -13,7 +13,6 @@ for (let i = 0; i < swipey.length; i++) {
   swipey[i].addEventListener('touchmove', swipemove);
   swipey[i].addEventListener('touchcancel', swipecancel);
   swipey[i].addEventListener('touchend', swipeend);
-  swipey[i].addEventListener('dragstart', swipestart)
 }
 
 function swipestart(e) {
