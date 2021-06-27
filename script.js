@@ -19,8 +19,8 @@ function swipestart(e) {
 
 }
 function swipemove(e) {
-startstop.innerHTML = e.clientX;
-  this.style.backgroundImage = "linear-gradient(to right, red, blue)"
+startstop.innerHTML = e.touches[0].clientX;
+this.style.backgroundImage = "linear-gradient(to right, red, blue)"
 }
 function swipecancel(e) {
   startstop.innerHTML = 'swipe cancelled';
