@@ -17,7 +17,7 @@ for (let i = 0; i < swipey.length; i++) {
 }
 
 function swipestart(e) {
-this.style.backgroundImage= "linearGradient(to bottom, red, blue)"
+this.style.backgroundImage= "linear-gradient(to bottom, red, blue)"
 }
 function swipemove(e) {
 this.style.backgroundColor='purple'
