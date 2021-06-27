@@ -19,7 +19,7 @@ for (let i = 0; i < swipey.length; i++) {
 function swipestart() {
   this.style.color='blue';
  
-  swipemove(e)
+  swipemove()
 }
 function swipemove(e) {
 
