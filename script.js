@@ -16,11 +16,11 @@ for (let i = 0; i < swipey.length; i++) {
 }
 
 function swipestart(e) {
-
+  this.style.backgroundImage = "linear-gradient(to right, red, blue)"
 }
 function swipemove(e) {
-startstop.innerHTML = e.touches[0].clientX;
-this.style.backgroundImage = "linear-gradient(to right, red, blue)"
+let touchx = e.touches[0].clientX;
+startstop.innerHTML = swipey[0].width;
 }
 function swipecancel(e) {
   startstop.innerHTML = 'swipe cancelled';
