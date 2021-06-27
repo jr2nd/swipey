@@ -16,13 +16,13 @@ for (let i = 0; i < swipey.length; i++) {
   swipey[i].addEventListener('dragstart', swipestart)
 }
 
-function swipestart() {
+function swipestart(e) {
   this.style.color='blue';
  
   swipemove()
 }
 function swipemove(e) {
-
+this.style.backgroundColor='purple'
 }
 function swipecancel(e) {
   startstop.innerHTML = 'swipe cancelled';
