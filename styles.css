@@ -13,7 +13,7 @@ body {
 }
 
 .swipey {
-  background-color: hsl(25, 75%, 47%);
+  background-color: #d2691e;
   font-size: 2em;
   border-radius: 25px 25px 25px 25px;
 }
