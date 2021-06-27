@@ -14,7 +14,8 @@ for (let i = 0; i < swipey.length; i++) {
 }
 
 function swipestart(e) {
- coords.innerHTML = e.targetTouches[0].target.tagName; 
+ coords.innerHTML = e.targetTouches[0] + 'hello'; 
+ 
   swipemove(e)
 }
 function swipemove(e) {
