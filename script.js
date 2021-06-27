@@ -18,8 +18,6 @@ for (let i = 0; i < swipey.length; i++) {
 
 function swipestart(e) {
   this.style.color='blue';
- 
-  swipemove(e)
 }
 function swipemove(e) {
 this.style.backgroundColor='purple'
