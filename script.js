@@ -20,7 +20,7 @@ function swipestart(e) {
 
 }
 function swipemove(e) {
-startstop.innerHTML = (this.width - e.mouseX) / 100;
+startstop.innerHTML = this.width;
   this.style.backgroundImage = "linear-gradient(to right, red, blue)"
 }
 function swipecancel(e) {
