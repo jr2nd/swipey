@@ -16,7 +16,7 @@ function swipestart() {
 }
 function swipemove(e) {
 let swipeyX = e.touches[0].clientX;
-let swipeywidth = swipey[0].offsetWidth;
+let swipeywidth = swipey[0].clientWidth;
 let color1, color2, color3, color4;
 slider = (swipeywidth / swipeyX);
 slider < 25 ? color1 = 'yellow' : color1 = 'black';
