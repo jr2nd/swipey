@@ -1,5 +1,4 @@
 * {
-  box-sizing: border-box;
   text-align: center;
 }
 
@@ -16,6 +15,8 @@ body {
   background-color: #d2691e;
   font-size: 2em;
   border-radius: 25px 25px 25px 25px;
+  max-width: 200px;
+
 }
 .swipey:active {
   border-top: solid;

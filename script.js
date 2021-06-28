@@ -1,5 +1,3 @@
-
-
 const swipeycontainer = document.querySelector('#swipey-container');
 const swipey = document.querySelectorAll('.swipey');
 const answer = document.querySelector('#answer');
@@ -14,16 +12,14 @@ for (let i = 0; i < swipey.length; i++) {
   swipey[i].addEventListener('touchcancel', swipecancel);
   swipey[i].addEventListener('touchend', swipeend);
 }
-
 function swipestart() {
-  this.style.backgroundImage = "linear-gradient(to left, red, blue)"
 }
 function swipemove(e) {
-let touchx = this.touches[0].clientX;
+let swipeyX = this.touches[0].clientX;
 let swipeywidth = swipey[0].offsetWidth;
 let color1, color2, color3, color4;
 if(isrightswipe)console.log('right swipe')//DEBUG
-slider = (swipeywidth / touchx);
+slider = (swipeywidth / swipeyX);
 slider < 25 ? color1 = 'yellow' : color1 = 'black';
 slider < 50 ? color2 = 'yellow' : color2 = 'black';
 slider < 75 ? color3 = 'yellow' : color3 = 'black';
