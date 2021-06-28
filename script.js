@@ -12,18 +12,19 @@ for (let i = 0; i < swipey.length; i++) {
   swipey[i].addEventListener('touchcancel', swipecancel);
   swipey[i].addEventListener('touchend', swipeend);
 }
-function swipestart() {
+function swipestart(e) {
+let swipeleft = e.touches[0].clientX > 50;
+startstop.innerHTML = swipeleft;
 }
 function swipemove(e) {
 let swipeyX = e.touches[0].clientX;
 let swipeywidth = swipey[0].clientWidth;
 let color1, color2, color3, color4;
 slider = parseInt((swipeyX / swipeywidth) * 100);
-slider > 25 ? color1 = 'yellow' : color1 = 'black';
-slider > 50 ? color2 = 'yellow' : color2 = 'black';
-slider > 75 ? color3 = 'yellow' : color3 = 'black';
-slider > 100 ? color4 = 'yellow' : color4 = 'black';
-startstop.innerHTML = parseInt(swipeyX) + ' ' + parseInt(swipeywidth) + ' ' + slider;//DEBUG
+slider < 25 ? color1 = 'yellow' : color1 = 'black';
+slider < 50 ? color2 = 'yellow' : color2 = 'black';
+slider < 75 ? color3 = 'yellow' : color3 = 'black';
+slider < 100 ? color4 = 'yellow' : color4 = 'black';
 this.style.backgroundImage = "linear-gradient( to left, " +
 color1 + ", " +
 color2 + ", " +
