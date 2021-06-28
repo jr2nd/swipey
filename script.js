@@ -15,7 +15,7 @@ for (let i = 0; i < swipey.length; i++) {
 function swipestart(e) {
   let noswipe = e.touches[0].clientX > swipey[0].clientWidth / 4 &&
                 e.touches[0].clientX < (swipey[0].clientWidth / 4) * 3;
-  !noswipe ? swipemove() : e.innerHTML = 'nope';
+  !noswipe ? swipemove(e) : e.innerHTML = 'nope';
 }
 function swipemove(e) {
   let swipeyX = e.touches[0].clientX;
