@@ -14,7 +14,7 @@ for (let i = 0; i < swipey.length; i++) {
 }
 function swipestart(e) {
 let swipeleft = e.touches[0].clientX > 50;
-startstop.innerHTML = swipeleft;
+startstop.innerHTML = e.touches[0].clientX + ' ' + swipeleft;
 }
 function swipemove(e) {
 let swipeyX = e.touches[0].clientX;
