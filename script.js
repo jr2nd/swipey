@@ -18,7 +18,7 @@ function swipemove(e) {
 let swipeyX = e.touches[0].clientX;
 let swipeywidth = swipey[0].clientWidth;
 let color1, color2, color3, color4;
-slider = parseInt(swipeyX / swipeyWidth) * 100);
+slider = parseInt((swipeyX / swipeyWidth) * 100);
 slider < 25 ? color1 = 'yellow' : color1 = 'black';
 slider < 50 ? color2 = 'yellow' : color2 = 'black';
 slider < 75 ? color3 = 'yellow' : color3 = 'black';
