@@ -13,9 +13,9 @@ for (let i = 0; i < swipey.length; i++) {
   swipey[i].addEventListener('touchend', swipeend);
 }
 function swipestart(e) {
-  let noswipe = e.touches[0].clientX > swipey[0].clientWidth / 4 &&
-                e.touches[0].clientX < (swipey[0].clientWidth / 4) * 3;
-  !noswipe ? swipemove(e, this) : e.innerHTML = 'nope';
+  let isswipe = e.touches[0].clientX < swipey[0].clientWidth / 4 ||
+                e.touches[0].clientX > (swipey[0].clientWidth / 4) * 3;
+  isswipe ? swipemove(e, this) : this.innerHTML = 'nope';
 }
 function swipemove(e, t) {
   let swipeyX = e.touches[0].clientX;
