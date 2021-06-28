@@ -19,10 +19,10 @@ let swipeyX = e.touches[0].clientX;
 let swipeywidth = swipey[0].clientWidth;
 let color1, color2, color3, color4;
 slider = parseInt((swipeyX / swipeywidth) * 100);
-slider < 25 ? color1 = 'yellow' : color1 = 'black';
-slider < 50 ? color2 = 'yellow' : color2 = 'black';
-slider < 75 ? color3 = 'yellow' : color3 = 'black';
-slider < 100 ? color4 = 'yellow' : color4 = 'black';
+slider > 25 ? color1 = 'yellow' : color1 = 'black';
+slider > 50 ? color2 = 'yellow' : color2 = 'black';
+slider > 75 ? color3 = 'yellow' : color3 = 'black';
+slider > 100 ? color4 = 'yellow' : color4 = 'black';
 startstop.innerHTML = parseInt(swipeyX) + ' ' + parseInt(swipeywidth) + ' ' + slider;//DEBUG
 this.style.backgroundImage = "linear-gradient( to left, " +
 color1 + ", " +
