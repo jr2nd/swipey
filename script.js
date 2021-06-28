@@ -15,9 +15,9 @@ for (let i = 0; i < swipey.length; i++) {
 function swipestart(e) {
   let noswipe = e.touches[0].clientX > swipey[0].clientWidth / 4 &&
                 e.touches[0].clientX < (swipey[0].clientWidth / 4) * 3;
-  !noswipe ? swipemove(e) : e.innerHTML = 'nope';
+  !noswipe ? swipemove(e, this) : e.innerHTML = 'nope';
 }
-function swipemove(e) {
+function swipemove(e, t) {
   let swipeyX = e.touches[0].clientX;
   let swipeywidth = swipey[0].clientWidth;
   let color1, color2, color3, color4;
@@ -26,7 +26,7 @@ function swipemove(e) {
   slider < 50 ? (color2 = 'yellow') : (color2 = 'black');
   slider < 75 ? (color3 = 'yellow') : (color3 = 'black');
   slider < 100 ? (color4 = 'yellow') : (color4 = 'black');
-  this.style.backgroundImage =
+  t.style.backgroundImage =
     'linear-gradient( to left, ' +
     color1 +
     ', ' +
