@@ -13,8 +13,8 @@ for (let i = 0; i < swipey.length; i++) {
   swipey[i].addEventListener('touchend', swipeend);
 }
 function swipestart(e) {
-let swipeleft = e.touches[0].clientX > 50;
-startstop.innerHTML = e.touches[0].clientX + ' ' + swipeleft;
+let swipeleft = e.touches[0].clientX > swipey[0].clientWidth / 2;
+startstop.innerHTML = swipeleft;
 }
 function swipemove(e) {
 let swipeyX = e.touches[0].clientX;
