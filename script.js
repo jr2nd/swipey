@@ -30,7 +30,7 @@ function swipemove(e, t, leftOrRight) {
   slider < 75 ? (color3 = 'black') : (color3 = 'yellow');
 //  slider < 100 ? (color4 = 'black') : (color4 = 'yellow');
   t.style.backgroundImage =
-    'linear-gradient( to left, ' +
+    'linear-gradient( to right, ' +
     color1 +
     ', ' +
     color2 +
