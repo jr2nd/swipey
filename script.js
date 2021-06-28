@@ -24,7 +24,7 @@ function swipemove(e, t, leftOrRight) {
   let color1, color2, color3, color4;
   let swipeyDirection = 'to right'
   leftOrRight === 'swiperight' ? color1 = 'black' : color1 = 'yellow';  leftOrRight === 'swipeleft' ? color4 = 'black' : color4 = 'yellow';
-  leftOrRight === 'swipeleft' ? swipey-direction == 'to left' : swipeyDirection = 'to right'; 
+  leftOrRight === 'swipeleft' ? swipeyDirection == 'to left' : swipeyDirection = 'to right'; 
 
   slider = parseInt((swipeyX / swipeywidth) * 100);
   //slider < 25 ? (color1 = 'black') : (color1 = 'yellow');
