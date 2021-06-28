@@ -15,14 +15,14 @@ for (let i = 0; i < swipey.length; i++) {
   swipey[i].addEventListener('touchend', swipeend);
 }
 
-function swipestart(e) {
+function swipestart() {
   this.style.backgroundImage = "linear-gradient(to left, red, blue)"
 }
 function swipemove(e) {
-let touchx = e.touches[0].clientX;
+let touchx = this.touches[0].clientX;
 let swipeywidth = swipey[0].clientWidth;
 let color1, color2, color3, color4;
-slider = (swipeywidth / touchx) * 50;
+slider = (swipeywidth / touchx);
 slider < 25 ? color1 = 'yellow' : color1 = 'black';
 slider < 50 ? color2 = 'yellow' : color2 = 'black';
 slider < 75 ? color3 = 'yellow' : color3 = 'black';
