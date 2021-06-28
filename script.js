@@ -15,7 +15,7 @@ for (let i = 0; i < swipey.length; i++) {
 function swipestart() {
 }
 function swipemove(e) {
-let swipeyX = this.touches[0].clientX;
+let swipeyX = 1;//DEBUG //this.touches[0].clientX;
 let swipeywidth = swipey[0].offsetWidth;
 let color1, color2, color3, color4;
 if(isrightswipe)console.log('right swipe')//DEBUG
