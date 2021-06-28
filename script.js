@@ -18,7 +18,6 @@ function swipemove(e) {
 let swipeyX = 1;//DEBUG //this.touches[0].clientX;
 let swipeywidth = swipey[0].offsetWidth;
 let color1, color2, color3, color4;
-if(isrightswipe)console.log('right swipe')//DEBUG
 slider = (swipeywidth / swipeyX);
 slider < 25 ? color1 = 'yellow' : color1 = 'black';
 slider < 50 ? color2 = 'yellow' : color2 = 'black';
