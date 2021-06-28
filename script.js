@@ -19,11 +19,11 @@ function swipestart(event) {
   if(swipeleft)(swipemove(event, this, 'swipeleft'));
 }
 function swipemove(e, t, leftOrRight) {
- leftOrRight === 'swiperight' ? color1 = 'black' : color1 = 'yellow'
- leftOrRight === 'swipeleft' ? color4 = 'black' : color4 = 'yellow'
   let swipeyX = e.touches[0].clientX;
   let swipeywidth = swipey[0].clientWidth;
   let color1, color2, color3, color4;
+  leftOrRight === 'swiperight' ? color1 = 'black' : color1 = 'yellow'
+  leftOrRight === 'swipeleft' ? color4 = 'black' : color4 = 'yellow' 
   slider = parseInt((swipeyX / swipeywidth) * 100);
   slider < 25 ? (color1 = 'black') : (color1 = 'yellow');
   slider < 50 ? (color2 = 'black') : (color2 = 'yellow');
