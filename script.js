@@ -8,24 +8,27 @@ const mousey = document.querySelector('#mousey');
 
 for (let i = 0; i < swipey.length; i++) {
   swipey[i].addEventListener('touchstart', swipestart);
- // swipey[i].addEventListener('touchmove', swipemove);
+  // swipey[i].addEventListener('touchmove', swipemove);
   swipey[i].addEventListener('touchcancel', swipecancel);
   swipey[i].addEventListener('touchend', swipeend);
 }
-function swipestart(e) {
-  let isswipe = e.touches[0].clientX < swipey[0].clientWidth / 4 ||
-                e.touches[0].clientX > (swipey[0].clientWidth / 4) * 3;
-  isswipe ? swipemove(e, this) : this.innerHTML = 'nope';
+function swipestart(event) {
+  let swiperight = event.touches[0].clientX < swipey[0].clientWidth / 4;
+  let swipeleft = event.touches[0].clientX > (swipey[0].clientWidth / 4) * 3;
+  if(swiperight)(swipemove(event, this, 'swiperight'));
+  if(swipeleft)(swipemove(event, this, 'swipeleft'));
 }
-function swipemove(e, t) {
+function swipemove(e, t, leftOrRight) {
+ leftOrRight === 'swiperight' ? color1 = 'black' : color1 = 'yellow'
+ leftOrRight === 'swipeleft' ? color4 = 'black' : color4 = 'yellow'
   let swipeyX = e.touches[0].clientX;
   let swipeywidth = swipey[0].clientWidth;
   let color1, color2, color3, color4;
   slider = parseInt((swipeyX / swipeywidth) * 100);
-  slider < 25 ? (color1 = 'yellow') : (color1 = 'black');
-  slider < 50 ? (color2 = 'yellow') : (color2 = 'black');
-  slider < 75 ? (color3 = 'yellow') : (color3 = 'black');
-  slider < 100 ? (color4 = 'yellow') : (color4 = 'black');
+  slider < 25 ? (color1 = 'black') : (color1 = 'yellow');
+  slider < 50 ? (color2 = 'black') : (color2 = 'yellow');
+  slider < 75 ? (color3 = 'black') : (color3 = 'yellow');
+  slider < 100 ? (color4 = 'black') : (color4 = 'yellow');
   t.style.backgroundImage =
     'linear-gradient( to left, ' +
     color1 +
