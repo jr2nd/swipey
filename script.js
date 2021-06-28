@@ -25,10 +25,10 @@ function swipemove(e, t, leftOrRight) {
   leftOrRight === 'swiperight' ? color1 = 'black' : color1 = 'yellow'
   leftOrRight === 'swipeleft' ? color4 = 'black' : color4 = 'yellow' 
   slider = parseInt((swipeyX / swipeywidth) * 100);
-  slider < 25 ? (color1 = 'black') : (color1 = 'yellow');
+  //slider < 25 ? (color1 = 'black') : (color1 = 'yellow');
   slider < 50 ? (color2 = 'black') : (color2 = 'yellow');
   slider < 75 ? (color3 = 'black') : (color3 = 'yellow');
-  slider < 100 ? (color4 = 'black') : (color4 = 'yellow');
+//  slider < 100 ? (color4 = 'black') : (color4 = 'yellow');
   t.style.backgroundImage =
     'linear-gradient( to left, ' +
     color1 +
