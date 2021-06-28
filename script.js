@@ -23,7 +23,7 @@ slider < 25 ? color1 = 'yellow' : color1 = 'black';
 slider < 50 ? color2 = 'yellow' : color2 = 'black';
 slider < 75 ? color3 = 'yellow' : color3 = 'black';
 slider < 100 ? color4 = 'yellow' : color4 = 'black';
-startstop.innerHTML = parseInt(swipeyX) + ' ' + parseInt(swipeywidth) + ' ' + parseInt(slider);//DEBUG
+startstop.innerHTML = parseInt(swipeyX) + ' ' + parseInt(swipeywidth) + ' ' + slider;//DEBUG
 this.style.backgroundImage = "linear-gradient( to left, " +
 color1 + ", " +
 color2 + ", " +
