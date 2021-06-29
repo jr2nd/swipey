@@ -32,7 +32,7 @@ function swipemove(e, t, leftOrRight) {
     color2,
     color3,
     color4 = 'yellow';
-  if (swipeyDirection === ' to left') {
+  if (swipeyDirection === 'to left') {
     slider < 75 ? (color2 = 'black') : (color2 = 'yellow');
     slider < 50 ? (color3 = 'black') : (color3 = 'yellow');
   }
