@@ -19,6 +19,7 @@ function swipestart(event) {
   if (swipeleft) swipemove(event, this, 'swipeleft');
 }
 function swipemove(e, t, leftOrRight) {
+  startstop.innerHTML = leftOrRight;//DEBUG
   let swipeyX = e.touches[0].clientX;
   let swipeywidth = swipey[0].clientWidth;
   let swipeyDirection = 'to right';
@@ -51,7 +52,6 @@ function swipemove(e, t, leftOrRight) {
     ', ' +
     color4 +
     ')';
-startstop.innerHTML = `[${color1} ${color2} ${color3} ${color4} ${swipeyDirection}]`
   }
 function swipecancel(e) {
   startstop.innerHTML = 'swipe cancelled';
