@@ -26,12 +26,12 @@ function swipemove(e, t, leftOrRight) {
   leftOrRight === 'swipeleft' ? swipeyDirection == 'to left' : swipeyDirection = 'to right';
   slider = parseInt((swipeyX / swipeywidth) * 100);
   color1 = 'black';
-  if(swipeleft){
+  if(swipeyDirection === 'swipeleft'){
   slider < 75 ? (color2 = 'black') : (color2 = 'yellow');
   slider < 50 ? (color3 = 'black') : (color3 = 'yellow');
   slider < 25 ? (color4 = 'black') : (color4 = 'yellow');
   }
-  if(swiperight){
+  if(swipeyDirection === 'swipeyright'){
   slider > 25 ? (color2 = 'black') : (color2 = 'yellow');
   slider > 50 ? (color3 = 'black') : (color3 = 'yellow');
   slider > 75 ? (color4 = 'black') : (color4 = 'yellow');
