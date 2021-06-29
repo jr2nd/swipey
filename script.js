@@ -51,7 +51,7 @@ function swipemove(e, t, leftOrRight) {
     ', ' +
     color4 +
     ')';
-startstop.innerHTML = '[${color1} ${color2} ${color3} ${color4}]'
+startstop.innerHTML = `[${color1} ${color2} ${color3} ${color4}]`
   }
 function swipecancel(e) {
   startstop.innerHTML = 'swipe cancelled';
