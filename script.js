@@ -31,11 +31,11 @@ function swipemove(e, t, leftOrRight) {
     color2,
     color3,
     color4 = 'yellow';
-  if (swipeyDirection === 'swipeleft') {
+  if (swipeyDirection === ' to left') {
     slider < 75 ? (color2 = 'black') : (color2 = 'yellow');
     slider < 50 ? (color3 = 'black') : (color3 = 'yellow');
   }
-  if (swipeyDirection === 'swiperight') {
+  if (swipeyDirection === 'to right') {
     slider > 25 ? (color2 = 'black') : (color2 = 'yellow');
     slider > 50 ? (color3 = 'black') : (color3 = 'yellow');
   }
