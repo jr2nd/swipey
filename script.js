@@ -13,6 +13,7 @@ for (let i = 0; i < swipey.length; i++) {
   swipey[i].addEventListener('touchend', swipeend);
 }
 function swipestart(event) {
+  this.style.background = swipeyColor;
   let swiperight = event.touches[0].clientX < swipey[0].clientWidth / 4;
   let swipeleft = event.touches[0].clientX > (swipey[0].clientWidth / 4) * 3;
   if(swiperight)(swipemove(event, this, 'swiperight'));
@@ -21,17 +22,22 @@ function swipestart(event) {
 function swipemove(e, t, leftOrRight) {
   let swipeyX = e.touches[0].clientX;
   let swipeywidth = swipey[0].clientWidth;
-  let color1, color2, color3, color4;
   let swipeyDirection = 'to right'
-  leftOrRight === 'swiperight' ? color1 = 'black' : color1 = 'yellow';  leftOrRight === 'swipeleft' ? color4 = 'black' : color4 = 'yellow';
+  //leftOrRight === 'swiperight' ? color1 = 'black' : color1 = 'yellow';  leftOrRight === 'swipeleft' ? color4 = 'black' : color4 = 'yellow';
   leftOrRight === 'swipeleft' ? swipeyDirection == 'to left' : swipeyDirection = 'to right';
   slider = parseInt((swipeyX / swipeywidth) * 100);
-  //slider < 25 ? (color1 = 'black') : (color1 = 'yellow');
-  slider < 50 ? (color2 = 'black') : (color2 = 'yellow');
-  slider < 75 ? (color3 = 'black') : (color3 = 'yellow');
-//  slider < 100 ? (color4 = 'black') : (color4 = 'yellow');
+  color1 = 'black';
+  if(swipeleft){
+  slider < 75 ? (color2 = 'black') : (color2 = 'yellow');
+  slider < 50 ? (color3 = 'black') : (color3 = 'yellow');
+  slider < 25 ? (color4 = 'black') : (color4 = 'yellow');
+  }
+  if(swiperight){
+  slider > 25 ? (color2 = 'black') : (color2 = 'yellow');
+  slider > 50 ? (color3 = 'black') : (color3 = 'yellow');
+  slider > 75 ? (color4 = 'black') : (color4 = 'yellow');
+  }
   t.style.backgroundImage =
-  
     'linear-gradient(' + swipeyDirection + ', '  +
     color1 +
     ', ' +
