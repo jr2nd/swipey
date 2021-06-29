@@ -13,7 +13,6 @@ for (let i = 0; i < swipey.length; i++) {
   swipey[i].addEventListener('touchend', swipeend);
 }
 function swipestart(event) {
-  this.style.background = swipeyColor;
   let swiperight = event.touches[0].clientX < swipey[0].clientWidth / 4;
   let swipeleft = event.touches[0].clientX > (swipey[0].clientWidth / 4) * 3;
   if(swiperight)(swipemove(event, this, 'swiperight'));
