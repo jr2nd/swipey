@@ -8,10 +8,10 @@ const mousey = document.querySelector('#mousey');
 
 for (let i = 0; i < swipey.length; i++) {
   swipey[i].addEventListener('touchstart', swipestart);
-  swipey[i].addEventListener('touchmove', swipemove);
+//  swipey[i].addEventListener('touchmove', swipemove);
   swipey[i].addEventListener('touchcancel', swipecancel);
   swipey[i].addEventListener('touchend', swipeend);
-} //for
+} //add touch event listeners`
 function swipestart(event) {
   let swiperight = event.touches[0].clientX < swipey[0].clientWidth / 4;
   let swipeleft = event.touches[0].clientX > (swipey[0].clientWidth / 4) * 3;
