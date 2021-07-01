@@ -5,7 +5,7 @@ const startstop = document.querySelector('#startstop');
 const coords = document.querySelector('#coords');
 const mousex = document.querySelector('#mousex');
 const mousey = document.querySelector('#mousey');
-
+let swiperight, swipeleft;
 for (let i = 0; i < swipey.length; i++) {
   swipey[i].addEventListener('touchstart', swipestart);
 //  swipey[i].addEventListener('touchmove', swipemove);
@@ -13,12 +13,12 @@ for (let i = 0; i < swipey.length; i++) {
   swipey[i].addEventListener('touchend', swipeend);
 } //add touch event listeners`
 function swipestart(event) {
-  let swiperight = event.touches[0].clientX < swipey[0].clientWidth / 4;
-  let swipeleft = event.touches[0].clientX > (swipey[0].clientWidth / 4) * 3;
-  if (swiperight) swipemove(event, this, 'to right');
-  if (swipeleft) swipemove(event, this, 'to left');
+  swiperight = event.touches[0].clientX < swipey[0].clientWidth / 4;
+  swipeleft = event.touches[0].clientX > (swipey[0].clientWidth / 4) * 3;
+/*  if (swiperight) swipemove(event, this, 'to right');
+  if (swipeleft) swipemove(event, this, 'to left');*/
 } //swipestart()
-function swipemove(e, t, leftOrRight) {
+function swipemove(e, t) {
   let swipeyX = e.touches[0].clientX;
   let swipeywidth = swipey[0].clientWidth;
   slider = parseInt((swipeyX / swipeywidth) * 100);
