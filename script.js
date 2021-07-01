@@ -34,7 +34,7 @@ function swipemove(e, t, leftOrRight) {
     slider > 25 ? (color2 = 'black') : (color2 = 'yellow');
     slider > 50 ? (color3 = 'black') : (color3 = 'yellow');
   } //if
-  startstop.innerHTML = swipeyX + ' ' + leftOrRight;//DEBUG
+  startstop.innerHTML = slider + ' ' + leftOrRight;//DEBUG
   t.style.backgroundImage =
     'linear-gradient(' +
     leftOrRight +
