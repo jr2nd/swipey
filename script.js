@@ -15,32 +15,28 @@ for (let i = 0; i < swipey.length; i++) {
 function swipestart(event) {
   let swiperight = event.touches[0].clientX < swipey[0].clientWidth / 4;
   let swipeleft = event.touches[0].clientX > (swipey[0].clientWidth / 4) * 3;
-  if (swiperight) swipemove(event, this, 'swiperight');
-  if (swipeleft) swipemove(event, this, 'swipeleft');
+  if (swiperight) swipemove(event, this, 'to right');
+  if (swipeleft) swipemove(event, this, 'to left');
 } //swipestart()
 function swipemove(e, t, leftOrRight) {
-  startstop.innerHTML = leftOrRight; //DEBUG
   let swipeyX = e.touches[0].clientX;
   let swipeywidth = swipey[0].clientWidth;
-  let swipeyDirection = 'to right';
-  if (leftOrRight === 'swipeleft') swipeyDirection == 'to left';
-  if (leftOrRight === 'swiperight') swipeyDirection = 'to right';
   slider = parseInt((swipeyX / swipeywidth) * 100);
   let color1 = 'black',
     color2,
     color3,
     color4 = 'yellow';
-  if (swipeyDirection === 'to left') {
+  if (leftOrRight === 'to left') {
     slider < 75 ? (color2 = 'black') : (color2 = 'yellow');
     slider < 50 ? (color3 = 'black') : (color3 = 'yellow');
   } //if
-  if (swipeyDirection === 'to right') {
+  if (leftOrRight === 'to right') {
     slider > 25 ? (color2 = 'black') : (color2 = 'yellow');
     slider > 50 ? (color3 = 'black') : (color3 = 'yellow');
   } //if
   t.style.backgroundImage =
     'linear-gradient(' +
-    swipeyDirection +
+    leftOrRight +
     ', ' +
     color1 +
     ', ' +
