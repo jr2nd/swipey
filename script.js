@@ -29,7 +29,7 @@ function swipemove(t, leftOrRight) {
     color2 = 'black',
     color3 = 'yellow',
     color4 = 'yellow';
-  t.style.backgroundImage =
+/*  t.style.backgroundImage =
     'linear-gradient(to ' +
     leftOrRight +
     ', ' +
@@ -41,6 +41,7 @@ function swipemove(t, leftOrRight) {
     ', ' +
     color4 +
     ')';
+    */
 } //swipemove()
 function swipecancel(e) {
   startstop.innerHTML = 'swipe cancelled';
