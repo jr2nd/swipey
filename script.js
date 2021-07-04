@@ -20,16 +20,15 @@ function swipestart(e) {
     : (swipeyDirection = 'left');
   swipemove(this, e, swipeyDirection);
 } //swipestart()
-function swipemove(t,e, leftOrRight) {
-  startstop.innerHTML = 't: ' + t + 'e: ' + e;
-  let swipeyX = e.touches[0].clientX;
-  let swipeyWidth = t.clientWidth;
+function swipemove(swipeydiv,touchevent, leftOrRight) {
+  let swipeyX = swipeyDirection.touches[0].clientX;
+  let swipeyWidth = touchevent.clientWidth;
   slider = parseInt((swipeyX / swipeyWidth) * 100);
   let color1 = 'black',
     color2 = 'black',
     color3 = 'yellow',
     color4 = 'yellow';
-  
+  swipeydiv.style.backgroundImage=linear-gradient('to right' , green, red, blue, yellow);
 } //swipemove()
 function swipecancel(e) {
   startstop.innerHTML = 'swipe cancelled';
