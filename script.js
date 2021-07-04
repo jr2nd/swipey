@@ -20,17 +20,9 @@ function swipemove(t, leftOrRight) {
   let swipeywidth = swipey[0].clientWidth;
   slider = parseInt((swipeyX / swipeywidth) * 100);
   let color1 = 'black',
-    color2,
-    color3,
+    color2 = 'yellow',
+    color3 = 'yellow',
     color4 = 'yellow';
-  if (leftOrRight === 'to left') {
-    slider < 75 ? (color2 = 'black') : (color2 = 'yellow');
-    slider < 50 ? (color3 = 'black') : (color3 = 'yellow');
-  } //if
-  if (leftOrRight === 'to right') {
-    slider > 25 ? (color2 = 'black') : (color2 = 'yellow');
-    slider > 50 ? (color3 = 'black') : (color3 = 'yellow');
-  } //if
   startstop.innerHTML = slider + ' ' + leftOrRight;//DEBUG
   t.style.backgroundImage =
     'linear-gradient(' +
