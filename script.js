@@ -21,7 +21,6 @@ function swipestart(e) {
   swipemove(this, e, swipeyDirection);
 } //swipestart()
 function swipemove(swipeyDiv,touchEvent, leftOrRight) {
-  startstop.innerHTML = 'swipeyDiv: ' + swipeyDiv;
   let swipeyX = touchEvent.touches[0].clientX;
   let swipeyWidth = swipeyDiv.clientWidth;
   slider = parseInt((swipeyX / swipeyWidth) * 100);
@@ -29,7 +28,7 @@ function swipemove(swipeyDiv,touchEvent, leftOrRight) {
     color2 = 'black',
     color3 = 'yellow',
     color4 = 'yellow';
-  swipeyDiv.style.backgroundImage="linear-gradient('to right' , green, red, blue, yellow)";
+  swipeyDiv.style.backgroundImage="linear-gradient(to right , green, red, blue, yellow)";
 } //swipemove()
 function swipecancel(e) {
   startstop.innerHTML = 'swipe cancelled';
