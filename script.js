@@ -15,7 +15,7 @@ for (let i = 0; i < swipey.length; i++) {
 function swipestart() {
   console.log('swipestart: ' + this)
   /*this < (swipey[0].clientWidth / 4) ? swipeyDirection = 'to right' : swipeyDirection= 'to left';
-swipemove(this, swipeyDirection);
+*/swipemove(this, swipeyDirection);
 } //swipestart()
 function swipemove(t, leftOrRight) {
   console.log('first: ' + leftOrRight)
