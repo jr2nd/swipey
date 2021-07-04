@@ -24,7 +24,7 @@ function swipemove(swipeyDiv,touchEvent, leftOrRight) {
   startstop.innerHTML = 'swipeyDiv: ' + swipeyDiv;
   //let swipeyX = swipeyDiv.touches[0].clientX;
   let swipeyWidth = touchEvent.clientWidth;
-  slider = parseInt((swipeyX / swipeyWidth) * 100);
+  //slider = parseInt((swipeyX / swipeyWidth) * 100);
   let color1 = 'black',
     color2 = 'black',
     color3 = 'yellow',
