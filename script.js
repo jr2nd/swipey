@@ -25,7 +25,7 @@ function swipemove(t, leftOrRight) {
   let swipeyWidth = t.clientWidth;
   slider = parseInt((swipeyX / swipeyWidth) * 100);
   let color1 = 'black',
-    color2 = 'yellow',
+    color2 = 'black',
     color3 = 'yellow',
     color4 = 'yellow';
   t.style.backgroundImage =
