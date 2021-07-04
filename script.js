@@ -6,29 +6,30 @@ const startstop = document.querySelector('#startstop');
 const coords = document.querySelector('#coords');
 const mousex = document.querySelector('#mousex');
 const mousey = document.querySelector('#mousey');
-console.log(DEBUG)
+console.log(DEBUG);
 for (let i = 0; i < swipey.length; i++) {
   swipey[i].addEventListener('touchstart', swipestart);
   swipey[i].addEventListener('touchcancel', swipecancel);
   swipey[i].addEventListener('touchend', swipeend);
 } //add touch event listeners`
 function swipestart() {
-console.log('swipestart: ' + this.e)//DEBUG
-  swipeyDirection = 'to right';//DEBUG
-  /*this < (swipey[0].clientWidth / 4) ? swipeyDirection = 'to right' : swipeyDirection= 'to left';
-*/swipemove(this, swipeyDirection);
+  this.event.touches[0] < swipey[0].clientWidth / 4
+    ? (swipeyDirection = 'to right')
+    : (swipeyDirection = 'to left');
+  swipemove(this, swipeyDirection);
 } //swipestart()
 function swipemove(t, leftOrRight) {
-  console.log('first: ' + leftOrRight)
-/*  let swipeyX = this.event.touches[0].clientX;
+  console.log('first: ' + leftOrRight);
+  /*  let swipeyX = this.event.touches[0].clientX;
   let swipeyWidth = swipey[0].clientWidth;*/
- // slider = parseInt((swipeyX / swipeyWidth) * 100);
+  // slider = parseInt((swipeyX / swipeyWidth) * 100);
   let color1 = 'black',
     color2 = 'yellow',
     color3 = 'yellow',
     color4 = 'yellow';
-  DEBUG ? 
-    console.log('leftOrRight=' + leftOrRight): console.log('DEBUG: swipemove()')//DEBUG
+  DEBUG
+    ? console.log('leftOrRight=' + leftOrRight)
+    : console.log('DEBUG: swipemove()'); //DEBUG
   t.style.backgroundImage =
     'linear-gradient(' +
     leftOrRight +
