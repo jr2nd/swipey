@@ -15,8 +15,8 @@ for (let i = 0; i < swipey.length; i++) {
 function swipestart() {
   console.log(this)
 /*  this.swipey[0].clientX < swipey[0].clientWidth / 4 ? swipeyDirection = 'to right' : swipeyDirection= 'to left';
-swipemove(this, swipeyDirection);
-} //swipestart()*/
+swipemove(this, swipeyDirection);*/
+} //swipestart()
 function swipemove(t, leftOrRight) {
   let swipeyX = t.touches[0].clientX;
   let swipeyWidth = swipey[0].clientWidth;
@@ -25,9 +25,8 @@ function swipemove(t, leftOrRight) {
     color2 = 'yellow',
     color3 = 'yellow',
     color4 = 'yellow';
-  if(DEBUG){
-    startstop.innerHTML = slider + ' ' + leftOrRight;
-  }//DEBUG
+  DEBUG ? 
+    startstop.innerHTML = slider + ' ' + leftOrRight : console.log('DEBUG: swipemove()')//DEBUG
   t.style.backgroundImage =
     'linear-gradient(' +
     leftOrRight +
@@ -46,4 +45,4 @@ function swipecancel(e) {
 } //swipecancel()
 function swipeend(e) {
   startstop.innerHTML = 'swipe end';
-} //swipeend()
+} /*swipeend()*/
