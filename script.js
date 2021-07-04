@@ -28,7 +28,7 @@ function swipemove(swipeydiv,touchevent, leftOrRight) {
     color2 = 'black',
     color3 = 'yellow',
     color4 = 'yellow';
-  swipeydiv.style.backgroundImage=linear-gradient('to right' , green, red, blue, yellow);
+  touchevent.style.backgroundImage=linear-gradient('to right' , green, red, blue, yellow);
 } //swipemove()
 function swipecancel(e) {
   startstop.innerHTML = 'swipe cancelled';
