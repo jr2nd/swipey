@@ -13,7 +13,7 @@ for (let i = 0; i < swipey.length; i++) {
   swipey[i].addEventListener('touchend', swipeend);
 } //add touch event listeners`
 function swipestart() {
-  console.log('swipestart: ' + this)
+console.log('swipestart: ' + this.e)//DEBUG
   swipeyDirection = 'to right';//DEBUG
   /*this < (swipey[0].clientWidth / 4) ? swipeyDirection = 'to right' : swipeyDirection= 'to left';
 */swipemove(this, swipeyDirection);
