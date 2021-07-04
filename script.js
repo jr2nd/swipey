@@ -1,4 +1,5 @@
 const DEBUG = 1;
+DEBUG ? console.log("DEBUG: " + DEBUG) : console.log('clear all DEBUG statements');
 const swipeycontainer = document.querySelector('#swipey-container');
 const swipey = document.querySelectorAll('.swipey');
 const answer = document.querySelector('#answer');
@@ -6,7 +7,6 @@ const startstop = document.querySelector('#startstop');
 const coords = document.querySelector('#coords');
 const mousex = document.querySelector('#mousex');
 const mousey = document.querySelector('#mousey');
-console.log(DEBUG);
 for (let i = 0; i < swipey.length; i++) {
   swipey[i].addEventListener('touchstart', swipestart);
   swipey[i].addEventListener('touchcancel', swipecancel);
