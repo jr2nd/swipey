@@ -12,12 +12,10 @@ for (let i = 0; i < swipey.length; i++) {
   swipey[i].addEventListener('touchend', swipeend);
 } //add touch event listeners`
 function swipestart() {
-  swiperight = this.touches[0].clientX < swipey[0].clientWidth / 4;
-  swipeleft = this.touches[0].clientX > (swipey[0].clientWidth / 4) * 3;
-/*  if (swiperight) swipemove(this, 'to right');
-  if (swipeleft) swipemove(this, 'to left');*/
+  this.touches[0].clientX < swipey[0].clientWidth / 4 ? swipeyDirection = 'to right' : swipeyDirection= 'to left';
+swipemove(this, swipeyDirection);
 } //swipestart()
-function swipemove(t, swipeyDirection) {
+function swipemove(t, leftOrRight) {
   let swipeyX = t.touches[0].clientX;
   let swipeywidth = swipey[0].clientWidth;
   slider = parseInt((swipeyX / swipeywidth) * 100);
@@ -25,11 +23,11 @@ function swipemove(t, swipeyDirection) {
     color2,
     color3,
     color4 = 'yellow';
-  if (swipeyDirection === 'to left') {
+  if (leftOrRight === 'to left') {
     slider < 75 ? (color2 = 'black') : (color2 = 'yellow');
     slider < 50 ? (color3 = 'black') : (color3 = 'yellow');
   } //if
-  if (swipeyDirection === 'to right') {
+  if (leftOrRight === 'to right') {
     slider > 25 ? (color2 = 'black') : (color2 = 'yellow');
     slider > 50 ? (color3 = 'black') : (color3 = 'yellow');
   } //if
