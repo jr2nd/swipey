@@ -27,11 +27,8 @@ function swipemove(t, leftOrRight) {
     color2 = 'yellow',
     color3 = 'yellow',
     color4 = 'yellow';
-  DEBUG
-    ? console.log('leftOrRight=' + leftOrRight)
-    : console.log('DEBUG: swipemove()'); //DEBUG
   t.style.backgroundImage =
-    'linear-gradient(' +
+    'linear-gradient(to ' +
     leftOrRight +
     ', ' +
     color1 +
