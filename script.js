@@ -14,8 +14,8 @@ for (let i = 0; i < swipey.length; i++) {
 } //add touch event listeners`
 function swipestart() {
   console.log(this)
-/*  this.swipey[0].clientX < swipey[0].clientWidth / 4 ? swipeyDirection = 'to right' : swipeyDirection= 'to left';
-swipemove(this, swipeyDirection);*/
+  this.swipey[0].clientX < swipey[0].clientWidth / 4 ? swipeyDirection = 'to right' : swipeyDirection= 'to left';
+swipemove(this, swipeyDirection);
 } //swipestart()
 function swipemove(t, leftOrRight) {
   let swipeyX = t.touches[0].clientX;
