@@ -21,6 +21,7 @@ function swipestart(e) {
   swipemove(e, swipeyDirection);
 } //swipestart()
 function swipemove(t, leftOrRight) {
+  console.log('swipemove' + t)//DEBUG
   let swipeyX = t.touches[0].clientX;
   let swipeyWidth = t.clientWidth;
   slider = parseInt((swipeyX / swipeyWidth) * 100);
