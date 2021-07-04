@@ -20,9 +20,9 @@ function swipestart() {
 } //swipestart()
 function swipemove(t, leftOrRight) {
   console.log('first: ' + leftOrRight);
-  /*  let swipeyX = this.event.touches[0].clientX;
+    let swipeyX = this.event.touches[0].clientX;
   let swipeyWidth = swipey[0].clientWidth;*/
-  // slider = parseInt((swipeyX / swipeyWidth) * 100);
+   slider = parseInt((swipeyX / swipeyWidth) * 100);
   let color1 = 'black',
     color2 = 'yellow',
     color3 = 'yellow',
