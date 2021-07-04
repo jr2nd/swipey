@@ -1,5 +1,7 @@
 const DEBUG = 1;
-DEBUG ? console.log("DEBUG: " + DEBUG) : console.log('clear all DEBUG statements');
+DEBUG
+  ? console.log('DEBUG: ' + DEBUG)
+  : console.log('clear all DEBUG statements');
 const swipeycontainer = document.querySelector('#swipey-container');
 const swipey = document.querySelectorAll('.swipey');
 const answer = document.querySelector('#answer');
@@ -13,16 +15,15 @@ for (let i = 0; i < swipey.length; i++) {
   swipey[i].addEventListener('touchend', swipeend);
 } //add touch event listeners`
 function swipestart(e) {
-  e.touches[0].clientX < swipey[0].clientWidth / 4
-    ? (swipeyDirection = 'to right')
-    : (swipeyDirection = 'to left');
-  swipemove(this, swipeyDirection);
+  e.touches[0].clientX < swipey[0].clientWidth / 2
+    ? (swipeyDirection = 'right')
+    : (swipeyDirection = 'left');
+  swipemove(e, swipeyDirection);
 } //swipestart()
 function swipemove(t, leftOrRight) {
-  console.log('first: ' + leftOrRight);
-    let swipeyX = this.event.touches[0].clientX;
-  let swipeyWidth = swipey[0].clientWidth;
-   slider = parseInt((swipeyX / swipeyWidth) * 100);
+  let swipeyX = t.event.touches[0].clientX;
+  let swipeyWidth = t.clientWidth;
+  slider = parseInt((swipeyX / swipeyWidth) * 100);
   let color1 = 'black',
     color2 = 'yellow',
     color3 = 'yellow',
