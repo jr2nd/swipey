@@ -15,13 +15,13 @@ for (let i = 0; i < swipey.length; i++) {
   swipey[i].addEventListener('touchend', swipeend);
 } //add touch event listeners`
 function swipestart(e) {
+  startstop.innerHTML = 'swipestart: ' + e;//DEBUG
   e.touches[0].clientX < swipey[0].clientWidth / 2
     ? (swipeyDirection = 'right')
     : (swipeyDirection = 'left');
   swipemove(e, swipeyDirection);
 } //swipestart()
 function swipemove(t, leftOrRight) {
-  startstop.innerHTML = 'swipemove: ' + t; //DEBUG
   let swipeyX = t.touches[0].clientX;
   let swipeyWidth = t.clientWidth;
   slider = parseInt((swipeyX / swipeyWidth) * 100);
