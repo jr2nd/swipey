@@ -26,7 +26,7 @@ function swipemove(t, leftOrRight) {
     color3 = 'yellow',
     color4 = 'yellow';
   DEBUG ? 
-    startstop.innerHTML = slider + ' ' + leftOrRight : console.log('DEBUG: swipemove()')//DEBUG
+    console.log('leftOrRight=' + leftOrRight): console.log('DEBUG: swipemove()')//DEBUG
   t.style.backgroundImage =
     'linear-gradient(' +
     leftOrRight +
