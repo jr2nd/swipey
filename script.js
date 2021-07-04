@@ -6,7 +6,7 @@ const startstop = document.querySelector('#startstop');
 const coords = document.querySelector('#coords');
 const mousex = document.querySelector('#mousex');
 const mousey = document.querySelector('#mousey');
-let swiperight, swipeleft;
+console.log(DEBUG)
 for (let i = 0; i < swipey.length; i++) {
   swipey[i].addEventListener('touchstart', swipestart);
   swipey[i].addEventListener('touchcancel', swipecancel);
