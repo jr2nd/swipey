@@ -15,11 +15,10 @@ for (let i = 0; i < swipey.length; i++) {
   swipey[i].addEventListener('touchend', swipeend);
 } //add touch event listeners`
 function swipestart(e) {
-  startstop.innerHTML = 'swipestart: ' + this;//DEBUG
   e.touches[0].clientX < swipey[0].clientWidth / 2
     ? (swipeyDirection = 'right')
     : (swipeyDirection = 'left');
-  swipemove(e, swipeyDirection);
+  swipemove(this, swipeyDirection);
 } //swipestart()
 function swipemove(t, leftOrRight) {
   let swipeyX = t.touches[0].clientX;
