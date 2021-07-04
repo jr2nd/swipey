@@ -20,15 +20,15 @@ function swipestart(e) {
     : (swipeyDirection = 'left');
   swipemove(this, e, swipeyDirection);
 } //swipestart()
-function swipemove(swipeydiv,touchevent, leftOrRight) {
-  let swipeyX = swipeyDirection.touches[0].clientX;
-  let swipeyWidth = touchevent.clientWidth;
+function swipemove(swipeyDiv,touchEvent, leftOrRight) {
+  let swipeyX = swipeyDiv.touches[0].clientX;
+  let swipeyWidth = touchEvent.clientWidth;
   slider = parseInt((swipeyX / swipeyWidth) * 100);
   let color1 = 'black',
     color2 = 'black',
     color3 = 'yellow',
     color4 = 'yellow';
-  touchevent.style.backgroundImage=linear-gradient('to right' , green, red, blue, yellow);
+  swipeyDiv.style.backgroundImage=linear-gradient('to right' , green, red, blue, yellow);
 } //swipemove()
 function swipecancel(e) {
   startstop.innerHTML = 'swipe cancelled';
