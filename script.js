@@ -18,10 +18,10 @@ function swipestart(e) {
   e.touches[0].clientX < swipey[0].clientWidth / 2
     ? (swipeyDirection = 'right')
     : (swipeyDirection = 'left');
-  swipemove(this, swipeyDirection);
+  swipemove(this, e, swipeyDirection);
 } //swipestart()
-function swipemove(t, leftOrRight) {
-  let swipeyX = t.touches[0].clientX;
+function swipemove(t,e, leftOrRight) {
+  let swipeyX = e.touches[0].clientX;
   let swipeyWidth = t.clientWidth;
   slider = parseInt((swipeyX / swipeyWidth) * 100);
   let color1 = 'black',
