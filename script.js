@@ -28,11 +28,11 @@ function swipemove(swipeyDiv,touchEvent, leftOrRight) {
     color2 = 'black',
     color3 = 'yellow',
     color4 = 'yellow';
-  swipeyDiv.style.backgroundImage="linear-gradient(to right , green, red, blue, yellow)";
+  swipeyDiv.style.backgroundImage="linear-gradient(to" + leftOrRight + ", green, red, blue, yellow)";
 } //swipemove()
 function swipecancel(e) {
-  startstop.innerHTML = 'swipe cancelled';
+  startstop.innerHTML = 'swipe cancelled';//DEBUG
 } //swipecancel()
 function swipeend(e) {
-  startstop.innerHTML = 'swipe end';
+  startstop.innerHTML = 'swipe end';//DEBUG
 } /*swipeend()*/
