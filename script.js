@@ -12,7 +12,7 @@ const mousey = document.querySelector('#mousey');
 for (let i = 0; i < swipey.length; i++) {
   swipey[i].addEventListener('touchstart', swipestart);
   swipey[i].addEventListener('touchcancel', function() {
-    swipecancel();
+    swipecancel(this);
   });
   swipey[i].addEventListener('touchend', function() {
     swipeend(this);
@@ -39,7 +39,7 @@ function swipemove(swipeyDiv, touchEvent, leftOrRight) {
   swipeyDiv.style.backgroundImage =
     'linear-gradient(to ' + leftOrRight + ', green, green, green, yellow)';
 } //swipemove()
-function swipecancel(e) {
+function swipecancel(t) {
 this.classList.add('cancelled')
 } //swipecancel()
 function swipeend(t) {
