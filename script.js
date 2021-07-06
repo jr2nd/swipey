@@ -11,8 +11,12 @@ const mousex = document.querySelector('#mousex');
 const mousey = document.querySelector('#mousey');
 for (let i = 0; i < swipey.length; i++) {
   swipey[i].addEventListener('touchstart', swipestart);
-  swipey[i].addEventListener('touchcancel', swipecancel);
-  swipey[i].addEventListener('touchend', function(){swipeend()});
+  swipey[i].addEventListener('touchcancel', function() {
+    swipecancel();
+  });
+  swipey[i].addEventListener('touchend', function() {
+    swipeend();
+  });
 } //add touch event listeners`
 function swipestart(e) {
   e.touches[0].clientX < swipey[0].clientWidth / 2
@@ -32,9 +36,8 @@ function swipemove(swipeyDiv, touchEvent, leftOrRight) {
     'linear-gradient(to ' + leftOrRight + ', green, green, green, yellow)';
 } //swipemove()
 function swipecancel(e, t) {
-startstop.innerHTML=t;
-  //  t.style.backgroundColor = 'red';
+  t.style.backgroundColor = 'red';
 } //swipecancel()
 function swipeend(e, t) {
-    t.style.backgroundColor = 'orange';
+  t.style.backgroundColor = 'orange';
 } /*swipeend()*/
