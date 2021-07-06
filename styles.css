@@ -49,5 +49,8 @@ body {
   }
 }
 .checked {
+  text-decoration: underline;
+}
+.cancelled {
   background-color: red;
 }

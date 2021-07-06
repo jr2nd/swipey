@@ -17,8 +17,12 @@ for (let i = 0; i < swipey.length; i++) {
   swipey[i].addEventListener('touchend', function() {
     swipeend(this);
   });
+  swipey[i].addEventListener('click', function() {
+    swipeend(this);
+  })
 } //add touch event listeners`
 function swipestart(e) {
+  this.classList.remove('cancelled')
   e.touches[0].clientX < swipey[0].clientWidth / 2
     ? (swipeyDirection = 'right')
     : (swipeyDirection = 'left');
@@ -36,8 +40,7 @@ function swipemove(swipeyDiv, touchEvent, leftOrRight) {
     'linear-gradient(to ' + leftOrRight + ', green, green, green, yellow)';
 } //swipemove()
 function swipecancel(e) {
-//style.backgroundColor = 'red';
+this.classList.add('cancelled')
 } //swipecancel()
 function swipeend(t) {
-t.classList.add('checked')
-t.innerHTML='swipe end'} /*swipeend()*/
+ } /*swipeend()*/
