@@ -39,5 +39,5 @@ function swipecancel(e) {
 //style.backgroundColor = 'red';
 } //swipecancel()
 function swipeend(t) {
-startstop.innerHTML=t;
+t.classList.add('checked')
 t.innerHTML='swipe end'} /*swipeend()*/

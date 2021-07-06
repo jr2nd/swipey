@@ -48,3 +48,6 @@ body {
     background-color: green;
   }
 }
+.checked {
+  background-color: red;
+}
