@@ -40,6 +40,5 @@ function swipecancel(e) {
 } //swipecancel()
 function swipeend(t) {
 startstop.innerHTML=t;
-  t.style.backgroundColor='red'
-  //style.backgroundColor = 'orange';
+  t.style.innerHTML='swipe end'
 } /*swipeend()*/
