@@ -12,7 +12,7 @@ const mousey = document.querySelector('#mousey');
 for (let i = 0; i < swipey.length; i++) {
   swipey[i].addEventListener('touchstart', swipestart);
   swipey[i].addEventListener('touchcancel', swipecancel);
-  swipey[i].addEventListener('touchend', swipeend);
+  swipey[i].addEventListener('touchend', function(){swipeend(event, this)});
 } //add touch event listeners`
 function swipestart(e) {
   e.touches[0].clientX < swipey[0].clientWidth / 2
@@ -20,7 +20,7 @@ function swipestart(e) {
     : (swipeyDirection = 'left');
   swipemove(this, e, swipeyDirection);
 } //swipestart()
-function swipemove(swipeyDiv,touchEvent, leftOrRight) {
+function swipemove(swipeyDiv, touchEvent, leftOrRight) {
   let swipeyX = touchEvent.touches[0].clientX;
   let swipeyWidth = swipeyDiv.clientWidth;
   slider = parseInt((swipeyX / swipeyWidth) * 100);
@@ -28,11 +28,14 @@ function swipemove(swipeyDiv,touchEvent, leftOrRight) {
     color2 = 'black',
     color3 = 'yellow',
     color4 = 'yellow';
-  swipeyDiv.style.backgroundImage="linear-gradient(to " + leftOrRight + ", green, green, green, yellow)";
+  swipeyDiv.style.backgroundImage =
+    'linear-gradient(to ' + leftOrRight + ', green, green, green, yellow)';
 } //swipemove()
 function swipecancel(e, t) {
-t.style.backgroundColor='red'
+  console.log('cancel', e, t)
+  //t.style.backgroundColor = 'red';
 } //swipecancel()
 function swipeend(e, t) {
-t.style.backgroundColor='orange'
+console.log('end', e, t)
+  //  t.style.backgroundColor = 'orange';
 } /*swipeend()*/
