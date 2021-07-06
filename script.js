@@ -40,5 +40,4 @@ function swipecancel(e) {
 } //swipecancel()
 function swipeend(t) {
 startstop.innerHTML=t;
-  t.style.innerHTML='swipe end'
-} /*swipeend()*/
+t.innerHTML='swipe end'} /*swipeend()*/
