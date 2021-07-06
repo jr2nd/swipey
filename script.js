@@ -32,7 +32,8 @@ function swipemove(swipeyDiv, touchEvent, leftOrRight) {
     'linear-gradient(to ' + leftOrRight + ', green, green, green, yellow)';
 } //swipemove()
 function swipecancel(e, t) {
-  t.style.backgroundColor = 'red';
+startstop.innerHTML=t;
+  //  t.style.backgroundColor = 'red';
 } //swipecancel()
 function swipeend(e, t) {
     t.style.backgroundColor = 'orange';
