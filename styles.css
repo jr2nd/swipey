@@ -49,7 +49,7 @@ body {
   }
 }
 .checked {
-  text-decoration: dashed;
+  text-decoration: line-through;
 }
 .cancelled {
   background-color: red;
