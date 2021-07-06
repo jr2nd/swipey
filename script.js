@@ -15,7 +15,7 @@ for (let i = 0; i < swipey.length; i++) {
     swipecancel();
   });
   swipey[i].addEventListener('touchend', function() {
-    swipeend();
+    swipeend(this);
   });
 } //add touch event listeners`
 function swipestart(e) {
@@ -38,8 +38,8 @@ function swipemove(swipeyDiv, touchEvent, leftOrRight) {
 function swipecancel(e) {
 //style.backgroundColor = 'red';
 } //swipecancel()
-function swipeend(e) {
-  startstop.innerHTML=this;
+function swipeend(t) {
 
-//style.backgroundColor = 'orange';
+  t.style.backgroundColor='red'
+  //style.backgroundColor = 'orange';
 } /*swipeend()*/
