@@ -36,5 +36,6 @@ function swipecancel(e, t) {
   //t.style.backgroundColor = 'red';
 } //swipecancel()
 function swipeend(e, t) {
+  startstop.innerHTML='end: ' + e + ' ' + t;
   //  t.style.backgroundColor = 'orange';
 } /*swipeend()*/
