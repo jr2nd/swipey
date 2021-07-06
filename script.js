@@ -12,10 +12,10 @@ const mousey = document.querySelector('#mousey');
 for (let i = 0; i < swipey.length; i++) {
   swipey[i].addEventListener('touchstart', swipestart);
   swipey[i].addEventListener('touchcancel', function() {
-    swipecancel(e);
+    swipecancel();
   });
   swipey[i].addEventListener('touchend', function() {
-    swipeend(e);
+    swipeend();
   });
 } //add touch event listeners`
 function swipestart(e) {
