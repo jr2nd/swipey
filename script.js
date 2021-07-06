@@ -12,10 +12,10 @@ const mousey = document.querySelector('#mousey');
 for (let i = 0; i < swipey.length; i++) {
   swipey[i].addEventListener('touchstart', swipestart);
   swipey[i].addEventListener('touchcancel', function() {
-    swipecancel(e, t);
+    swipecancel(e);
   });
   swipey[i].addEventListener('touchend', function() {
-    swipeend(e, t);
+    swipeend(e);
   });
 } //add touch event listeners`
 function swipestart(e) {
@@ -35,9 +35,9 @@ function swipemove(swipeyDiv, touchEvent, leftOrRight) {
   swipeyDiv.style.backgroundImage =
     'linear-gradient(to ' + leftOrRight + ', green, green, green, yellow)';
 } //swipemove()
-function swipecancel(e, t) {
-  t.style.backgroundColor = 'red';
+function swipecancel(e) {
+  this.style.backgroundColor = 'red';
 } //swipecancel()
-function swipeend(e, t) {
-  t.style.backgroundColor = 'orange';
+function swipeend(e) {
+  this.style.backgroundColor = 'orange';
 } /*swipeend()*/
