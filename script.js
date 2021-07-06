@@ -32,10 +32,8 @@ function swipemove(swipeyDiv, touchEvent, leftOrRight) {
     'linear-gradient(to ' + leftOrRight + ', green, green, green, yellow)';
 } //swipemove()
 function swipecancel(e, t) {
-  startstop.innerHTML='cancel: ' + e + ' ' + t;
-  //t.style.backgroundColor = 'red';
+  t.style.backgroundColor = 'red';
 } //swipecancel()
 function swipeend(e, t) {
-  startstop.innerHTML='end: ' + e + ' ' + t;
-  //  t.style.backgroundColor = 'orange';
+    t.style.backgroundColor = 'orange';
 } /*swipeend()*/
