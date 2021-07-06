@@ -39,7 +39,7 @@ function swipecancel(e) {
 //style.backgroundColor = 'red';
 } //swipecancel()
 function swipeend(e) {
-  startstop.innerHTML=e;
+  startstop.innerHTML=this;
 
 //style.backgroundColor = 'orange';
 } /*swipeend()*/
