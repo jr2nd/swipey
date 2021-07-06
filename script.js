@@ -33,6 +33,6 @@ function swipemove(swipeyDiv,touchEvent, leftOrRight) {
 function swipecancel(e, t) {
 t.style.backgroundColor='red'
 } //swipecancel()
-function swipeend(e) {
+function swipeend(e, t) {
 t.style.backgroundColor='orange'
 } /*swipeend()*/
