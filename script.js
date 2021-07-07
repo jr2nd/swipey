@@ -1,7 +1,5 @@
 const DEBUG = 1;
-DEBUG
-  ? console.log('DEBUG: ' + DEBUG)
-  : console.log('clear all DEBUG statements');
+console.log(`(DEBUG LEVEL: ${DEBUG})`)
 const swipeycontainer = document.querySelector('#swipey-container');
 const swipey = document.querySelectorAll('.swipey');
 const answer = document.querySelector('#answer');
@@ -17,10 +15,12 @@ for (let i = 0; i < swipey.length; i++) {
   swipey[i].addEventListener('touchend', function() {
     swipeend(this);
   });
+} //add touch event listeners
+for(let i = 0; i < swipey.length; i++){
   swipey[i].addEventListener('click', function() {
-    swipeend(this);
-  })
-} //add touch event listeners`
+  swipeend(this);
+})
+}//add mouse event listeners
 function swipestart(e) {
   this.classList.remove('cancelled')
   e.touches[0].clientX < swipey[0].clientWidth / 2
@@ -28,19 +28,20 @@ function swipestart(e) {
     : (swipeyDirection = 'left');
   swipemove(this, e, swipeyDirection);
 } //swipestart()
-function swipemove(swipeyDiv, touchEvent, leftOrRight) {
-  let swipeyX = touchEvent.touches[0].clientX;
-  let swipeyWidth = swipeyDiv.clientWidth;
+function swipemove(t, e, leftOrRight) {
+  let swipeyX = e.touches[0].clientX;
+  let swipeyWidth = t.clientWidth;
   slider = parseInt((swipeyX / swipeyWidth) * 100);
   let color1 = 'black',
     color2 = 'black',
     color3 = 'yellow',
     color4 = 'yellow';
-  swipeyDiv.style.backgroundImage =
+  t.style.backgroundImage =
     'linear-gradient(to ' + leftOrRight + ', green, green, green, yellow)';
 } //swipemove()
 function swipecancel(t) {
 this.classList.add('cancelled')
 } //swipecancel()
 function swipeend(t) {
- } /*swipeend()*/
+startstop.innerHTML = startstop.innerHTML + ' ' + t
+} /*swipeend()*/
