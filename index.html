@@ -2,9 +2,10 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width", initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width", initial-scale="1.0" />
   <link rel="stylesheet" type="text/css" href="styles.css" />
   <script src="script.js" defer></script>
+<link rel="stylesheet" href="media.css" />
 </head>
 
 <body>
@@ -12,13 +13,15 @@
   <a href="/me.html">My other page</a>
 
   <div id="swipey-container">
-    <div id="swipey-01" class="swipey">swipey 01</div>
-    <div id="swipey-02" class="swipey">swipey 02</div>
-    <div id="swipey-03" class="swipey">swipey 03</div>
-    <div id="swipey-04" class="swipey">swipey 04</div>
+    <div id="swipey-01" class="swipey" draggable="true">swipey 01</div>
+    <div id="swipey-02" class="swipey" draggable="true">swipey 02</div>
+    <div id="swipey-03" class="swipey" draggable="true">swipey 03</div>
+    <div id="swipey-04" class="swipey" draggable="true">swipey 04</div>
+    <div id="dragHere" class="swipey" draggable="false">Drag Items Here</div>
+
   </div>
 
-  <div id="answer">
+  <div id="answers">
     <div id="startstop" class="answers"></div>
     <div id="coords" class="answers"></div>
     <div id="mousex" class="answers"></div>

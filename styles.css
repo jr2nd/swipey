@@ -34,7 +34,7 @@ body {
   background-color: blue;
 }
 
-#answer {
+#answers {
   display: grid;
   border-radius: 25px 25px 25px 25px;
   background-color: hsl(205, 75%, 47%);
@@ -42,15 +42,10 @@ body {
 #whaaa {
   background-color: red;
 }
-
-@media screen and (max-width: 576px) {
-  body {
-    background-color: green;
-  }
-}
 .checked {
   text-decoration: line-through;
 }
 .cancelled {
   background-color: red;
 }
+
