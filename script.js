@@ -32,12 +32,12 @@ function swipemove(t, e, leftOrRight) {
   let swipeyX = e.touches[0].clientX;
   let swipeyWidth = t.clientWidth;
   slider = parseInt((swipeyX / swipeyWidth) * 100);
-  let color1 = 'black',
-    color2 = 'black',
-    color3 = 'yellow',
+  let color1 = 'green',
+    color2 = 'green',
+    color3 = 'green',
     color4 = 'yellow';
   t.style.backgroundImage =
-    'linear-gradient(to ' + leftOrRight + ', green, green, green, yellow)';
+    `(t.style.backgroundImage=(${leftOrRight}, ${color1}, ${color2}, ${color3}, ${color4});`
 } //swipemove()
 function swipecancel(t) {
 this.classList.add('cancelled')
