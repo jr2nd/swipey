@@ -25,7 +25,7 @@ div {
   border-radius: 25px 0px;
 }
 #inputitem {
-  background-image: linear-gradient(to right, red, red, black,black, black, green,  green);
+  background-image: linear-gradient(to right,green, green,black, black, red, red );
 color: white;}
 #buttonTodo {
   background-color: green;
@@ -37,11 +37,6 @@ color: white;}
   border-radius: 25px 25px 25px 25px;
   height: 2em;
   text-align: center;
-}
-#swipey-01 {
-  color: black;
-  font-size: 1.5rem;
-  background-image: linear-gradient(to right,var(--color1), yellow, yellow, var(--color2));
 }
 .swipey:active {
   border-top: solid;
