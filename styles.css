@@ -14,13 +14,20 @@ body {
 div {
   margin: 1rem;
 }
-#swipey-continer {
+#swipey-container {
   display: flex;
   align-items: center;
   font-size: 2em;
   text-align: center;
 }
-
+#label-inputitem {
+  border-radius: 5px;
+}
+#inputitem {
+  background-image: linear-gradient(to right, red, yellow, green);
+  border-radius: 25px;
+  background-color: black;
+}
 .swipey {
   background-color: #d2691e;
   font-size: 2em;
@@ -29,7 +36,9 @@ div {
   text-align: center;
 }
 #swipey-01 {
-  background-image: linear-gradient(to right,var(--color1), black, black, var(--color2));
+  color: black;
+  font-size: 1.5rem;
+  background-image: linear-gradient(to right,var(--color1), yellow, yellow, var(--color2));
 }
 .swipey:active {
   border-top: solid;

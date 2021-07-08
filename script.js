@@ -1,5 +1,5 @@
 const DEBUG = 1;
-console.log(`(DEBUG LEVEL: ${DEBUG})`)
+console.log(`(DEBUG LEVEL: ${DEBUG})`);
 const swipeycontainer = document.querySelector('#swipey-container');
 const swipey = document.querySelectorAll('.swipey');
 const answer = document.querySelector('#answer');
@@ -7,7 +7,8 @@ const startstop = document.querySelector('#startstop');
 const coords = document.querySelector('#coords');
 const mousex = document.querySelector('#mousex');
 const mousey = document.querySelector('#mousey');
-for (let i = 0; i < swipey.length; i++) {
+swipey[0].addEventListener('click', submittext);
+for (let i = 1; i < swipey.length; i++) {
   swipey[i].addEventListener('touchstart', swipestart);
   swipey[i].addEventListener('touchcancel', function() {
     swipecancel(this);
@@ -16,16 +17,28 @@ for (let i = 0; i < swipey.length; i++) {
     swipeend(this);
   });
 } //add touch event listeners
-for(let i = 0; i < swipey.length; i++){
+for (let i = 1; i < swipey.length; i++) {
   swipey[i].addEventListener('click', function() {
-  swipeend(this);
-})
-}//add mouse event 
-for(let i = 0; i < swipey.length; i++){
+    swipeend(this);
+  });
+} //add mouse event listeners
+for (let i = 0; i < swipey.length; i++) {} //add drag event listeners
 
-}//add drag event listeners
+function submittext(t) {
+  doOrDay = (t.clientx / t.clientWidth) * 100;
+  startstop.innerHTML=swipey[0].innerHTML;/*
+  if (doOrDay < 25) {
+    t => {
+      let newEntry = document.createElement('div');
+      let newItem = document.createTextNode();
+    };
+  }
+  if (doOrDay > 74) {
+    t => {};
+  }*/
+} //submittext
 function swipestart(e) {
-  this.classList.remove('cancelled')
+  this.classList.remove('cancelled');
   e.touches[0].clientX < swipey[0].clientWidth / 2
     ? (swipeyDirection = 'right')
     : (swipeyDirection = 'left');
@@ -39,12 +52,11 @@ function swipemove(t, e, leftOrRight) {
     color2 = 'green',
     color3 = 'green',
     color4 = 'yellow';
-  t.style.backgroundImage =
-    `(t.style.backgroundImage=(${leftOrRight}, ${color1}, ${color2}, ${color3}, ${color4});`
+  t.style.backgroundImage = `(t.style.backgroundImage=(${leftOrRight}, ${color1}, ${color2}, ${color3}, ${color4});`;
 } //swipemove()
 function swipecancel(t) {
-this.classList.add('cancelled')
+  this.classList.add('cancelled');
 } //swipecancel()
 function swipeend(t) {
-startstop.innerHTML = startstop.innerHTML + ' ' + t
+  startstop.innerHTML = startstop.innerHTML + ' ' + t;
 } /*swipeend()*/
