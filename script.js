@@ -20,7 +20,10 @@ for(let i = 0; i < swipey.length; i++){
   swipey[i].addEventListener('click', function() {
   swipeend(this);
 })
-}//add mouse event listeners
+}//add mouse event 
+for(let i = 0; i < swipey.length; i++){
+
+}//add drag event listeners
 function swipestart(e) {
   this.classList.remove('cancelled')
   e.touches[0].clientX < swipey[0].clientWidth / 2

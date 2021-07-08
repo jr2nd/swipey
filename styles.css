@@ -1,3 +1,7 @@
+:root {
+  --color1: red;
+  --color2: green;
+}
 * {
   text-align: center;
   box-sizing: border-box;
@@ -5,9 +9,14 @@
 
 body {
   background: hsl(190, 75%, 47%);
+  text-align: center;
 }
-
+div {
+  margin: 1rem;
+}
 #swipey-continer {
+  display: flex;
+  align-items: center;
   font-size: 2em;
   text-align: center;
 }
@@ -17,7 +26,10 @@ body {
   font-size: 2em;
   border-radius: 25px 25px 25px 25px;
   height: 2em;
-
+  text-align: center;
+}
+#swipey-01 {
+  background-image: linear-gradient(to right,var(--color1), black, black, var(--color2));
 }
 .swipey:active {
   border-top: solid;

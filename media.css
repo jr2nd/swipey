@@ -1,6 +1,11 @@
 
 @media screen and (max-width: 576px) {
   body {
-    background-color: green;
+    background-color: yellow;
+    color: black;
+  }
+  .swipey {
+    background-color: black;
+    color: white;
   }
 }
