@@ -20,13 +20,17 @@ div {
   font-size: 2em;
   text-align: center;
 }
-#label-inputitem {
-  border-radius: 5px;
+#buttonToday {
+  background-color: red;
+  border-radius: 25px 0px;
 }
 #inputitem {
-  background-image: linear-gradient(to right, red, yellow, green);
-  border-radius: 25px;
+  background-image: linear-gradient(to right, red, yellow,yellow,  green);
   background-color: black;
+}
+#buttonTodo {
+  background-color: green;
+  border-radius: 0px 25px;
 }
 .swipey {
   background-color: #d2691e;
@@ -34,6 +38,7 @@ div {
   border-radius: 25px 25px 25px 25px;
   height: 2em;
   text-align: center;
+  min-width: 100px;
 }
 #swipey-01 {
   color: black;

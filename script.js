@@ -26,16 +26,14 @@ for (let i = 0; i < swipey.length; i++) {} //add drag event listeners
 
 function submittext(t) {
   doOrDay = (t.clientx / t.clientWidth) * 100;
-  startstop.innerHTML=swipey[0].innerHTML;/*
-  if (doOrDay < 25) {
+  if (doOrDay > 25) {
     t => {
-      let newEntry = document.createElement('div');
-      let newItem = document.createTextNode();
-    };
+      let newItem = document.createElement('div');
+      let newEntry = document.createTextNode(swipey[0].innerHTML);
+      newItem.appendChild(newEntry);
+      swipeycontainer.insertBefore(newItem, swipeycontainer.childNodes[0])
+startstop.innerHTML=doOrDay    };
   }
-  if (doOrDay > 74) {
-    t => {};
-  }*/
 } //submittext
 function swipestart(e) {
   this.classList.remove('cancelled');
