@@ -21,6 +21,7 @@ function submitText(t) {
     newItem = document.createElement('div');
     newEntry = document.createTextNode(text);
     newItem.appendChild(newEntry)
+    newItem.classList.add('todo')
 inputItem.value="";
 inputItem.focus();
 swipeycontainer.appendChild(newItem)

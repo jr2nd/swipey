@@ -11,10 +11,6 @@ body {
   background: hsl(190, 75%, 47%);
   text-align: center;
 }
-div {
-  margin: 1rem;
-  border: solid;
-}
 #input-container {
   display: flex;
   flex-wrap: nowrap;
@@ -83,4 +79,8 @@ div {
 #about {
   background-color: red;
   color: white;
+}
+.todo {
+  font-size: 1rem;
+  margin: 1rem;
 }
