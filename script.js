@@ -15,17 +15,21 @@ for (let i = 0; i < buttonsInput.length; i++) {
   });
 } //add input buttons event
 function submitText(t) {
+  const inputItem = document.querySelector('#inputItem');
+  let text = inputItem.value;
+  newItem = document.createElement('div');
+  newEntry = document.createTextNode(text);
+  newItem.appendChild(newEntry)
   if (t.id === 'buttonTodo') {
-    const inputItem = document.querySelector('#inputItem');
-    let text = inputItem.value;
-    newItem = document.createElement('div');
-    newEntry = document.createTextNode(text);
-    newItem.appendChild(newEntry)
     newItem.classList.add('todo')
-inputItem.value="";
-inputItem.focus();
-swipeycontainer.appendChild(newItem)
+    swipeycontainer.appendChild(newItem)
   }
+    if (t.id === 'buttonToday') {
+      newItem.classList.add('today')
+   swipeycontainer.insertBefore(newItem, swipeycontainer.childNodes[0])
+    }
+    inputItem.value = '';
+    inputItem.focus();  
 } //submitText
 for (let i = 0; i < swipey.length; i++) {
   swipey[i].addEventListener('touchstart', swipestart);
