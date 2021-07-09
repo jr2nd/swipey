@@ -15,9 +15,9 @@ function submitText(t) {
 if(t.id === 'buttonTodo'){
 
 }
-else if(t.id === 'buttonToday' {
-  
-})
+else if(t.id === 'buttonToday') {
+
+}
 }//submitText
 for (let i = 0; i < swipey.length; i++) {
   swipey[i].addEventListener('touchstart', swipestart);
