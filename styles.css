@@ -24,7 +24,8 @@ div {
   border-radius: 0px 25px;
 }
 #buttonToday {
-background-color: red;  border-radius: 25px 0px;
+  background-color: red;
+  border-radius: 25px 0px;
 }
 
 #swipey-container {
@@ -35,8 +36,17 @@ background-color: red;  border-radius: 25px 0px;
   text-align: center;
 }
 #inputitem {
-  background-image: linear-gradient(to right,green, green,black, black, red, red );
-color: white;}
+  background-image: linear-gradient(
+    to right,
+    green,
+    green,
+    black,
+    black,
+    red,
+    red
+  );
+  color: white;
+}
 .swipey {
   background-color: #d2691e;
   font-size: 2em;
@@ -50,15 +60,12 @@ color: white;}
   border-bottom: double;
   background-color: hsl(50, 75%, 47%);
 }
-
 .swipey-right {
   background-color: red;
 }
-
 .swipey-left {
   background-color: blue;
 }
-
 #answers {
   display: grid;
   border-radius: 25px 25px 25px 25px;
@@ -73,4 +80,7 @@ color: white;}
 .cancelled {
   background-color: red;
 }
-
+#about {
+  background-color: red;
+  color: white;
+}

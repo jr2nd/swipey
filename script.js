@@ -8,6 +8,7 @@ const coords = document.querySelector('#coords');
 const mousex = document.querySelector('#mousex');
 const mousey = document.querySelector('#mousey');
 const buttonsInput = document.querySelectorAll('.buttonInput');
+
 for (let i = 0; i < buttonsInput.length; i++) {
   buttonsInput[i].addEventListener('click', function() {
     submitText(this);
