@@ -13,24 +13,29 @@ body {
 }
 div {
   margin: 1rem;
+  border: solid;
+}
+#input-container {
+  display: flex;
+  flex-wrap: nowrap;
 }
 #swipey-container {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   font-size: 2em;
   text-align: center;
 }
-#buttonToday {
-  background-color: red;
-  border-radius: 25px 0px;
-}
-#inputitem {
-  background-image: linear-gradient(to right,green, green,black, black, red, red );
-color: white;}
 #buttonTodo {
   background-color: green;
   border-radius: 0px 25px;
 }
+#buttonToday {
+background-color: red;  border-radius: 25px 0px;
+}
+#inputitem {
+  background-image: linear-gradient(to right,green, green,black, black, red, red );
+color: white;}
 .swipey {
   background-color: #d2691e;
   font-size: 2em;

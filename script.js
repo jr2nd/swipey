@@ -17,7 +17,6 @@ function submitText(t) {
   if (t.id === 'buttonTodo') {
     const inputItem = document.querySelector('#inputItem');
     const text = inputItem.value;
-    startstop.innerHTML = text;
     newItem = document.createElement('div');
     newEntry = document.createTextNode(text);
     newItem.appendChild(newEntry)
