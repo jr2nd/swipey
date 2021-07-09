@@ -8,17 +8,22 @@ const coords = document.querySelector('#coords');
 const mousex = document.querySelector('#mousex');
 const mousey = document.querySelector('#mousey');
 const buttonsInput = document.querySelectorAll('.buttonInput');
-for(let i = 0; i < buttonsInput.length; i++) {
-buttonsInput[i].addEventListener('click', function(){submitText(this)})
-}//add input buttons event 
+for (let i = 0; i < buttonsInput.length; i++) {
+  buttonsInput[i].addEventListener('click', function() {
+    submitText(this);
+  });
+} //add input buttons event
 function submitText(t) {
-if(t.id === 'buttonTodo'){
-
-}
-else if(t.id === 'buttonToday') {
-
-}
-}//submitText
+  if (t.id === 'buttonTodo') {
+    const inputItem = document.querySelector('#inputItem');
+    const text = inputItem.value;
+    startstop.innerHTML = text;
+    newItem = document.createElement('div');
+    newEntry = document.createTextNode(text);
+    newItem.appendChild(newEntry)
+swipeycontainer.appendChild(newItem)
+  }
+} //submitText
 for (let i = 0; i < swipey.length; i++) {
   swipey[i].addEventListener('touchstart', swipestart);
   swipey[i].addEventListener('touchcancel', function() {
