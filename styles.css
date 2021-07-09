@@ -83,8 +83,10 @@ body {
 .todo {
   font-size: 1rem;
   margin: 1rem;
+  background-color: green;
 }
 .today {
   font-size: 1rem;
   margin: 1rem;
+  background-color: red;;
 }
