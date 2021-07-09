@@ -7,8 +7,19 @@ const startstop = document.querySelector('#startstop');
 const coords = document.querySelector('#coords');
 const mousex = document.querySelector('#mousex');
 const mousey = document.querySelector('#mousey');
-swipey[0].addEventListener('click', submittext);
-for (let i = 1; i < swipey.length; i++) {
+const buttonsInput = document.querySelectorAll('.buttonInput');
+for(let i = 0; i < buttonsInput.length; i++) {
+buttonsInput[i].addEventListener('click', function(){submitText(this)})
+}//add input buttons event 
+function submitText(t) {
+if(t.id === 'buttonTodo'){
+
+}
+else if(t.id === 'buttonToday' {
+  
+})
+}//submitText
+for (let i = 0; i < swipey.length; i++) {
   swipey[i].addEventListener('touchstart', swipestart);
   swipey[i].addEventListener('touchcancel', function() {
     swipecancel(this);
@@ -17,24 +28,11 @@ for (let i = 1; i < swipey.length; i++) {
     swipeend(this);
   });
 } //add touch event listeners
-for (let i = 1; i < swipey.length; i++) {
+for (let i = 0; i < swipey.length; i++) {
   swipey[i].addEventListener('click', function() {
     swipeend(this);
   });
 } //add mouse event listeners
-for (let i = 0; i < swipey.length; i++) {} //add drag event listeners
-
-function submittext(t) {
-  doOrDay = (t.clientx / t.clientWidth) * 100;
-  if (doOrDay > 25) {
-    t => {
-      let newItem = document.createElement('div');
-      let newEntry = document.createTextNode(swipey[0].innerHTML);
-      newItem.appendChild(newEntry);
-      swipeycontainer.insertBefore(newItem, swipeycontainer.childNodes[0])
-startstop.innerHTML=doOrDay    };
-  }
-} //submittext
 function swipestart(e) {
   this.classList.remove('cancelled');
   e.touches[0].clientX < swipey[0].clientWidth / 2
