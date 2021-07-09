@@ -17,10 +17,12 @@ for (let i = 0; i < buttonsInput.length; i++) {
 function submitText(t) {
   if (t.id === 'buttonTodo') {
     const inputItem = document.querySelector('#inputItem');
-    const text = inputItem.value;
+    let text = inputItem.value;
     newItem = document.createElement('div');
     newEntry = document.createTextNode(text);
     newItem.appendChild(newEntry)
+inputItem.value="";
+inputItem.focus();
 swipeycontainer.appendChild(newItem)
   }
 } //submitText
