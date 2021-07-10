@@ -1,6 +1,7 @@
 :root {
-  --color1: red;
-  --color2: green;
+  --color-todo: green;
+  --color-submititem: black;
+  --color-today: red;
 }
 * {
   text-align: center;
@@ -11,51 +12,44 @@ body {
   background: hsl(190, 75%, 47%);
   text-align: center;
 }
-#buttonTodo {
-  background-color: green;
-  border-radius: 0px 25px;
-}
-#buttonToday {
-  background-color: red;
-  border-radius: 25px 0px;
-}
 
 #swipey-container {
   display: grid;
+  grid-template-areas: btnTodo input input input input input btnToday,
+  listTodo listToday;
   align-items: center;
   font-size: 2em;
   text-align: center;
 }
+#buttonTodo {
+  background-color: var(--color-todo);
+  border-radius: 0px 25px;
+  grid-area: btnTodo;
+}
 #inputitem {
   background-image: linear-gradient(
     to right,
-    green,
-    green,
-    black,
-    black,
-    red,
-    red
-  );
+    var(--color-todo),
+    var(--color-submititem),
+    var(--color-submititem),
+    var(--color-today));
+    grid-area: input;
   color: white;
 }
-.swipey {
-  background-color: #d2691e;
-  font-size: 2em;
-  border-radius: 25px 25px 25px 25px;
-  height: 2em;
-  text-align: center;
+#buttonToday {
+  background-color: var(--color-today);
+  border-radius: 25px 0px;
+  grid-area: btnToday;
 }
-.swipey:active {
-  border-top: solid;
-  border-right: groove;
-  border-bottom: double;
-  background-color: hsl(50, 75%, 47%);
+.listItem {
+  width: 50%;
+font-size: 1rem;
 }
-.swipey-right {
-  background-color: red;
+#listTodo {
+  
 }
-.swipey-left {
-  background-color: blue;
+#listToday {
+grid-area: listToday;
 }
 #answers {
   display: grid;
