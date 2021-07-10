@@ -12,9 +12,7 @@ body {
   background: hsl(190, 75%, 47%);
   text-align: center;
 }
-.griditem {
-  border: solid;
-}
+
 
 #swipey-container{
   display: grid;
@@ -51,6 +49,8 @@ body {
 }
 .listItem {
   font-size: 1rem;
+  border: solid;
+  border-width: thin;
 }
 #listTodo {
   grid-area: listtodo;
