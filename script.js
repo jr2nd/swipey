@@ -17,6 +17,7 @@ for (let i = 0; i < buttonsInput.length; i++) {
 function submitText(t) {
   const inputItem = document.querySelector('#inputItem');
   let text = inputItem.value;
+  if(text.trim() === "")return;
   newItem = document.createElement('div');
   newEntry = document.createTextNode(text);
   newItem.appendChild(newEntry)

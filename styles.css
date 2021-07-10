@@ -12,19 +12,25 @@ body {
   background: hsl(190, 75%, 47%);
   text-align: center;
 }
+.griditem {
+  border: solid;
+}
 
-#swipey-container {
+#swipey-container{
+position: relative;
   display: grid;
-  grid-template-areas: btnTodo input input input input input btnToday,
-  listTodo listToday;
-  align-items: center;
+  grid-template-areas: 
+  'btntodo inputitem btntoday'
+  'listtodo listtoday';
+ align-items: center;
   font-size: 2em;
   text-align: center;
+  border: solid;
 }
 #buttonTodo {
   background-color: var(--color-todo);
   border-radius: 0px 25px;
-  grid-area: btnTodo;
+  grid-area: btntodo;;
 }
 #inputitem {
   background-image: linear-gradient(
@@ -33,23 +39,27 @@ body {
     var(--color-submititem),
     var(--color-submititem),
     var(--color-today));
-    grid-area: input;
   color: white;
+  grid-area: inputitem;;
 }
 #buttonToday {
   background-color: var(--color-today);
   border-radius: 25px 0px;
-  grid-area: btnToday;
+  grid-area: btntoday;
 }
 .listItem {
   width: 50%;
 font-size: 1rem;
 }
 #listTodo {
-  
+  grid-area: listtodo;
+  width: 50%;
+  position: absolute;
 }
 #listToday {
-grid-area: listToday;
+grid-area: listtoday;
+width: 50%;
+position: absolute;
 }
 #answers {
   display: grid;
