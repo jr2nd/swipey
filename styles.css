@@ -50,7 +50,7 @@ body {
   border-radius: 25px 0px;
 }
 .listItem {
-font-size: 1rem;
+  font-size: 1rem;
 }
 #listTodo {
   grid-area: listtodo;

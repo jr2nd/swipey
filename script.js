@@ -23,11 +23,11 @@ function submitText(t) {
   newItem.appendChild(newEntry)
   if (t.id === 'buttonTodo') {
     newItem.classList.add('todo')
-    swipeycontainer.appendChild(newItem)
+    listTodo.appendChild(newItem)
   }
     if (t.id === 'buttonToday') {
       newItem.classList.add('today')
-   swipeycontainer.insertBefore(newItem, swipeycontainer.childNodes[0])
+listToday.appendChild(newItem)
     }
     inputItem.value = '';
     inputItem.focus();  
