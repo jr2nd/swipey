@@ -11,18 +11,20 @@
 
 <body>
   <h1>TodoToday</h1>
-  <div> 
+  <div>
     <a href="/about.html">About</a>
   </div>
-  <div id="swipey-container">
-<div id="input-container">    <input type="button" id="buttonTodo" class="buttonInput griditem" value="To Do"></input>
+  <div id="swipey-container" class="container">
+    <div id="input-container" class="container"> <input type="button" id="buttonTodo" class="buttonInput griditem" value="To Do"></input>
     <input type="text" id="inputitem" class="griditem"/>
     <input type="button" id="buttonToday" class="buttonInput griditem" value="Today"></input>
-</div>
-<span id="listTodo" class="listItem griditem">ToDo</span>
-<div id="listToday" class="listItem griditem">Today</span>
-</span>
-  <!----
+    </div>
+    <div id="list-container" class="container">
+    <ol id="listTodo" class="listItem griditem">ToDo</ol>
+    <ol id="listToday" class="listItem griditem">Today</ol>
+    </div>
+  </div>
+    <!----
   <div id="answers">Ignore this
     <div id="startstop" class="answers"></div>
     <div id="coords" class="answers"></div>

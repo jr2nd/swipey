@@ -58,6 +58,9 @@ body {
 #listToday {
 grid-area: listtoday;
 }
+ol {
+  display: inline-block;
+}
 /*****************************************************/
 #answers {
   display: grid;

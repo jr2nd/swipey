@@ -17,20 +17,20 @@ for (let i = 0; i < buttonsInput.length; i++) {
 function submitText(t) {
   const inputItem = document.querySelector('#inputItem');
   let text = inputItem.value;
-  if(text.trim() === "")return;
+  if (text.trim() === '') return;
   newItem = document.createElement('div');
   newEntry = document.createTextNode(text);
-  newItem.appendChild(newEntry)
+  newItem.appendChild(newEntry);
   if (t.id === 'buttonTodo') {
-    newItem.classList.add('todo')
-    listTodo.appendChild(newItem)
+    newItem.classList.add('todo');
+    listTodo.appendChild(newItem);
   }
-    if (t.id === 'buttonToday') {
-      newItem.classList.add('today')
-listToday.appendChild(newItem)
-    }
-    inputItem.value = '';
-    inputItem.focus();  
+  if (t.id === 'buttonToday') {
+    newItem.classList.add('today');
+    listToday.appendChild(newItem);
+  }
+  inputItem.value = '';
+  inputItem.focus();
 } //submitText
 for (let i = 0; i < swipey.length; i++) {
   swipey[i].addEventListener('touchstart', swipestart);
